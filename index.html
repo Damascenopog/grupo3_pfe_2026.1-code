@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body style="background-color: lightgray;">
-    <!-- HEADER PRINCIPAL (SERÁ REPLICADO PARA TODAS AS PAGINAS)-->
-    <header>
-        <div>
-            <a href="./index.html">
+
+<!-- HEADER (REPLICADO PARA TODAS AS PAGINAS)-->
+<header>
+        <nav class="navbar" aria-label="Navegação principal">
+
+            <!-- Logo (esquerda) -->
+            <a href="./index.html" class="navbar_logo">
                 <img src="images/logo-acb.png" alt="Logo do site">
             </a>
-        </div>
-        <!-- MENU DE NAVEGAÇÃO -->
-        <nav aria-label="Navegação principal">
-            <ul>
+
+            <!-- Links (centro) -->
+            <ul class="navbar_links">
                 <li><a href="./index.html">Início</a></li>
                 <li><a href="./quemsomos.html">Quem somos</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contato.html">Contato</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li><a href="./cadastro.html">Torne-se uma associado</a></li>
             </ul>
+
+            <!-- Ações (direita) -->
+            <div class="navbar_actions">
+                <a href="./login.html" class="btn_entrar">Entrar</a>
+                <a href="./cadastro.html" class="btn-area_associados">Área de Associados</a>
+            </div>
         </nav>
-        <div>
-            <a href="./login.html">Login</a>
-            <a href="./cadastro.html">Torne-se um associado</a>
-        </div>
-    </header>
-    <!-- FIM DO HEADER PRINCIPAL-->
+</header>
+    <!-- FIM DO HEADER -->
+
     <main>
         <!-- SEÇÃO HERO (DESTAQUE INICIAL DA PAGINA) -->
         <section>

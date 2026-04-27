@@ -11,28 +11,31 @@
 <body style="background-color: lightgray;">
 
 <!-- HEADER (REPLICADO PARA TODAS AS PAGINAS)-->
-<header>
-        <nav class="navbar" aria-label="Navegação principal">
+<header class="top-header">
+    <nav class="nav-container">
 
-            <!-- Logo (esquerda) -->
-            <a href="./index.html" class="navbar_logo">
-                <img src="images/logo-acb.png" alt="Logo do site">
-            </a>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo-acb.png" alt="Logo ACB">
+        </div>
 
-            <!-- Links (centro) -->
-            <ul class="navbar_links">
-                <li><a href="./index.html">Início</a></li>
-                <li><a href="./quemsomos.html">Quem somos</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contato.html">Contato</a></li>
-            </ul>
+        <!-- Menu central -->
+        <div class="menu">
+            <a href="index.html" class="active">Início</a>
+            <a href="quemsomos.html">Sobre nós</a>
+            <a href="blog.html">Blog</a>
+            <a href="newsletter.html">Newsletter</a>
+            <a href="membros.html">Membros</a>
+            <a href="contato.html">Contato</a>
+        </div>
 
-            <!-- Ações (direita) -->
-            <div class="navbar_actions">
-                <a href="./login.html" class="btn_entrar">Entrar</a>
-                <a href="./cadastro.html" class="btn-area_associados">Área de Associados</a>
-            </div>
-        </nav>
+        <!-- Botões direita -->
+        <div class="actions">
+            <a href="login.html" class="btn-outline">Entrar</a>
+            <a href="cadastro.html" class="btn-solid">Área de Associados</a>
+        </div>
+
+    </nav>
 </header>
     <!-- FIM DO HEADER -->
 

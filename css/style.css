@@ -1,12 +1,13 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Header */
 .top-header {
-    background-color: #1A1A66; /* azul da logo */
+    background-color: #1A1A66;
+    /* azul da logo */
     padding: 14px 50px;
 }
 
@@ -47,7 +48,7 @@
 
 /* Hover */
 .menu a:hover {
-    background-color: rgba(255,255,255,0.15);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Botões direita */
@@ -87,6 +88,95 @@
     opacity: 0.9;
 }
 
+/** SEÇÃO HERO PRINCIPAL - PAG HOME **/
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('../images/fundo-hero.jpg') center/cover no-repeat;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* container pai da seção de textos do hero */
+.hero-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* container com os textos do hero */
+.hero-text-container {
+    text-align: center;
+    max-width: 600px;
+    word-break: break-word;
+}
+
+/* titulo principal do hero */
+.hero-text-container h1 {
+    font-size: 50px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* paragrafro descritivo do hero */
+.hero-text-container p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* coloração do techo em amarelo */
+.highlight {
+    color: #FFC107
+}
+
+/* Botões */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* botão de associar do hero */
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* botão para conhecer a AC*/
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* efeito de hover no botão de se associar*/
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/** FIM DA SEÇÃO HERO **/
+
 .footer {
     background-color: #1A1A66;
     color: #ffffff;
@@ -106,7 +196,8 @@
 }
 
 .footer-col h3 {
-    color: #FFC107; /* amarelo do print */
+    color: #FFC107;
+    /* amarelo do print */
     margin-bottom: 15px;
     font-size: 16px;
     letter-spacing: 1px;
@@ -135,7 +226,7 @@
 
 /* Linha de baixo */
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     margin-top: 40px;
     padding-top: 15px;
     display: flex;
@@ -155,4 +246,3 @@
 .footer-links a:hover {
     color: #ffffff;
 }
-

@@ -1,10 +1,15 @@
+/*  =============================================
+    RESET BÁSICO
+    ============================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Header */
+/*  =============================================
+    HEADER
+    =============================================  */
 .top-header {
     background-color: #1A1A66;
     /* azul da logo */
@@ -88,7 +93,9 @@
     opacity: 0.9;
 }
 
-/** SEÇÃO HERO PRINCIPAL - PAG HOME **/
+/** =============================================
+    SEÇÃO HERO PRINCIPAL - PAG HOME
+    ============================================= **/
 
 .hero {
     position: relative;
@@ -175,8 +182,39 @@
     background-color: #1d4ed8;
 }
 
-/** FIM DA SEÇÃO HERO **/
+/* Barra de estatísticas abaixo da imagem hero.
+   Fundo azul escuro, itens distribuídos igualmente em linha. */
+.hero aside {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0f1a4a;
+    padding: 28px 40px;
+}
 
+/* Cada bloco de estatística — número + descrição empilhados */
+.hero aside div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Número em destaque amarelo */
+.hero aside strong {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f5a623;
+}
+
+/* Texto descritivo abaixo do número */
+.hero aside span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*  =============================================
+    FOOTER
+    ============================================= */
 .footer {
     background-color: #1A1A66;
     color: #ffffff;
@@ -245,4 +283,752 @@
 
 .footer-links a:hover {
     color: #ffffff;
+}
+
+/* =============================================
+   UTILITÁRIOS COMPARTILHADOS
+   Estilos reutilizados em várias seções
+   ============================================= */
+
+/* Wrapper central de cada seção.
+   Limita a largura do conteúdo a 1100px e centraliza na tela com margin auto.
+   O padding lateral evita que o conteúdo cole nas bordas em telas menores. */
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Label de cada seção (ex: "PRÓXIMOS EVENTOS").
+   Usa flex para alinhar a barrinha amarela e o texto na mesma linha. */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;  /* espaçamento entre letras, reforça o estilo "caixa alta" */
+    text-transform: uppercase;
+    color: #1a1a2e;
+    margin-bottom: 12px;
+}
+
+/* Barrinha amarela vertical que fica ao lado esquerdo do section-label.
+   É um elemento <span> vazio que vira um bloco pequeno só com cor. */
+.label-bar {
+    display: inline-block;
+    width: 4px;
+    height: 16px;
+    background-color: #f5a623;
+    border-radius: 2px;
+}
+
+/* Variação da label-bar usada em seções com fundo escuro (ex: seção Mercado).
+   Por enquanto tem a mesma cor, mas pode ser ajustada separadamente se necessário. */
+.label-bar--light {
+    background-color: #f5a623;
+}
+
+/* Linha que separa o título da seção do link "Ver todos →".
+   Flex com space-between empurra os dois para as extremidades opostas. */
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* alinha pelo rodapé, útil se os textos tiverem alturas diferentes */
+    margin-bottom: 32px;
+}
+
+/* Título principal de cada seção (o h2 dentro do header-row) */
+.section-header-row h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0; /* remove a margem padrão do h2 para o alinhamento flex funcionar direito */
+}
+
+/* Link "Ver todos →" que aparece no canto direito do header de algumas seções */
+.ver-todos {
+    color: #1a4fc4;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;   /* remove o sublinhado padrão de links */
+    white-space: nowrap;     /* impede que o texto quebre em duas linhas */
+}
+
+/* Adiciona sublinhado ao passar o mouse, como feedback visual */
+.ver-todos:hover {
+    text-decoration: underline;
+}
+
+
+/* =============================================
+   BOTÕES
+   Estilos reutilizados em várias seções
+   ============================================= */
+
+/* Botão principal azul sólido. Usado em CTAs como "Garanta sua vaga" e "Quero me associar".
+   display inline-block permite definir padding mesmo sendo um link <a>. */
+.btn-primary {
+    display: inline-block;
+    background-color: #1a4fc4;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s; /* animação suave na mudança de cor ao passar o mouse */
+}
+
+/* Escurece o azul ao passar o mouse */
+.btn-primary:hover {
+    background-color: #1440a8;
+}
+
+
+/* Botão secundário com borda escura e fundo transparente. Usado ao lado do btn-primary
+   como opção menos prioritária (ex: "Saiba mais"). */
+.btn-outline-dark {
+    display: inline-block;
+    border: 2px solid #1a1a2e;
+    color: #1a1a2e;
+    padding: 10px 24px;       /* padding levemente menor que o primário por causa da borda */
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s; /* anima tanto o fundo quanto o texto */
+}
+
+/* Inverte as cores ao passar o mouse: fundo escuro, texto branco */
+.btn-outline-dark:hover {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+/* =============================================
+   SEÇÃO: DESTAQUE DA SEMANA
+   ============================================= */
+
+.destaque-semana {
+    padding: 64px 0;
+    background-color: #f7f9fc;
+}
+
+.destaque-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.destaque-image-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.destaque-image-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.destaque-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: #f5a623;
+    color: #1a1a2e;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.destaque-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(10,20,60,0.92) 60%, transparent);
+    padding: 24px 20px 20px;
+    color: #fff;
+}
+
+.destaque-image-caption h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.destaque-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.destaque-date-badge {
+    display: inline-block;
+    background-color: #eef2fb;
+    color: #1a4fc4;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+.destaque-content h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.35;
+    margin: 0 0 14px;
+}
+
+.destaque-content p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.destaque-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.destaque-list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.destaque-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #1a4fc4;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* =============================================
+   SEÇÃO: PRÓXIMOS EVENTOS
+   ============================================= */
+
+.proximos-eventos {
+    padding: 64px 0;
+    background-color: #fff;
+}
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.evento-card {
+    background-color: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 10px;
+    padding: 24px;
+    transition: box-shadow 0.2s;
+}
+
+.evento-card:hover {
+    box-shadow: 0 4px 20px rgba(26, 79, 196, 0.1);
+}
+
+.evento-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.evento-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef2fb;
+    border-radius: 6px;
+    padding: 6px 12px;
+    line-height: 1.2;
+}
+
+.evento-day {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a4fc4;
+}
+
+.evento-month {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a4fc4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.evento-tipo {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.evento-tipo.forum {
+    background-color: #fff3e0;
+    color: #b45309;
+}
+
+.evento-tipo.webinar {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.evento-tipo.encontro {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.evento-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.4;
+    margin: 0 0 12px;
+}
+
+.evento-local {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+}
+
+/* =============================================
+   SEÇÃO: BLOG & NEWSLETTER
+   ============================================= */
+
+.blog-section {
+    padding: 64px 0;
+    background-color: #f7f9fc;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #e4e9f2;
+    transition: box-shadow 0.2s;
+}
+
+.blog-card:hover {
+    box-shadow: 0 4px 20px rgba(26, 79, 196, 0.1);
+}
+
+.blog-card-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-card-body {
+    padding: 20px;
+}
+
+.blog-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.blog-tag.mercado {
+    background-color: #e0f2fe;
+    color: #0369a1;
+}
+
+.blog-tag.regulacao {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+.blog-tag.associacao {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.blog-card-body h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.4;
+    margin: 0 0 10px;
+}
+
+.blog-card-body p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.ler-mais {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a4fc4;
+    text-decoration: none;
+}
+
+.ler-mais:hover {
+    text-decoration: underline;
+}
+
+/* =============================================
+   SEÇÃO: MERCADO — INDICADORES DO DIA
+   ============================================= */
+
+.mercado-section {
+    padding: 64px 0;
+    background-color: #0f1a4a;
+    background-image: url('images/mercado-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.mercado-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(10, 16, 60, 0.88);
+}
+
+.mercado-section .section-container {
+    position: relative;
+    z-index: 1;
+}
+
+.mercado-section .section-label {
+    color: #f5a623;
+}
+
+.mercado-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.mercado-header-row h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.mercado-update {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+}
+
+.indicadores-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.indicador-card {
+    background-color: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.indicador-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.indicador-value {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.indicador-change {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.indicador-change.up {
+    color: #4ade80;
+}
+
+.indicador-change.down {
+    color: #f87171;
+}
+
+.indicador-change.neutral {
+    color: rgba(255,255,255,0.5);
+}
+
+.mercado-cta-banner {
+    background-color: rgba(26, 79, 196, 0.35);
+    border: 1px solid rgba(26, 79, 196, 0.5);
+    border-radius: 10px;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.mercado-cta-text strong {
+    display: block;
+    color: #f5a623;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.mercado-cta-text p {
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* =============================================
+   SEÇÃO: ASSOCIE-SE
+   ============================================= */
+
+.associe-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.associe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.associe-content .section-label {
+    margin-bottom: 16px;
+}
+
+.associe-content h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+    margin: 0 0 16px;
+}
+
+.associe-intro {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 32px;
+}
+
+.associe-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.beneficio-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.beneficio-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background-color: #eef2fb;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficio-item strong {
+    display: block;
+    font-size: 15px;
+    color: #1a1a2e;
+    margin-bottom: 4px;
+}
+
+.beneficio-item p {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.associe-buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.associe-image-col {
+    position: relative;
+}
+
+.associe-photo {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.newsletter-badge {
+    position: absolute;
+    bottom: 24px;
+    left: -24px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    max-width: 300px;
+}
+
+.newsletter-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.newsletter-badge small {
+    display: block;
+    font-size: 11px;
+    color: #999;
+}
+
+.newsletter-badge strong {
+    font-size: 13px;
+    color: #1a1a2e;
+}
+
+.btn-assinar {
+    display: inline-block;
+    background-color: #1a4fc4;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.btn-assinar:hover {
+    background-color: #1440a8;
+}
+
+/* =============================================
+   RESPONSIVO — TABLET / MOBILE
+   ============================================= */
+
+@media (max-width: 900px) {
+    .destaque-grid,
+    .associe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eventos-grid,
+    .blog-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .indicadores-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .newsletter-badge {
+        left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .eventos-grid,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .indicadores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .mercado-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .associe-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .associe-photo {
+        height: 260px;
+    }
 }

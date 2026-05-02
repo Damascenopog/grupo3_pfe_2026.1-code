@@ -21,6 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Logo */
@@ -284,6 +285,64 @@
 .footer-links a:hover {
     color: #ffffff;
 }
+
+/*================================================
+    SEÇÃO HERO PAGINA QUEM SOMOS
+==================================================*/
+
+/* container principal da seção de textos*/
+.container-quem-somos {
+    max-width: 768px;
+    font-weight: bold;
+    margin: 0 380px;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Banner Principal */
+  .hero-banner-quem-somos {
+    height: 500px;
+    /* container da imagem de fundo do hero da pagina quem somos*/
+    background: linear-gradient(to right, rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.4)), 
+                url('../images/fundo-hero-quem-somos.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    color: white;
+  }
+  
+  /* container que armazena os textos*/
+  .content-wrapper {
+    max-width: 600px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+ 
+
+ .badge {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffc107; 
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: fit-content;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+  
 
 /* =============================================
    UTILITÁRIOS COMPARTILHADOS

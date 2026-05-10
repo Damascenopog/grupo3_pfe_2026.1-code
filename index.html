@@ -203,58 +203,12 @@
         </div>
 
         <div class="section-header-row">
-            <h2>Conteúdo que orienta decisões</h2>
+            <h2>Artigos recentes</h2>
             <a href="blog.html" class="ver-todos">Ver todos &rarr;</a>
         </div>
 
-        <div class="blog-grid">
-            <!-- Card 1 -->
-            <div class="blog-card">
-                <div class="blog-card-img">
-                    <img src="images/blog-1.jpg" alt="Blog post">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-tag mercado">Mercado</span>
-                    <h3>Como a alta dos juros impacta a carteira dos investidores em 2026</h3>
-                    <p>Especialistas da ACBrasil analisam os efeitos da política monetária e orientam sobre alocação estratégica.</p>
-                    <div class="blog-card-footer">
-                        <span class="blog-date">09 Abr 2026</span>
-                        <a href="#" class="ler-mais">Ler mais &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="blog-card">
-                <div class="blog-card-img">
-                    <img src="images/blog-2.jpg" alt="Blog post">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-tag regulacao">Regulação</span>
-                    <h3>CVM atualiza normas para fundos de investimento — o que muda?</h3>
-                    <p>Entenda as mudanças regulatórias e como elas afetam gestores e investidores qualificados.</p>
-                    <div class="blog-card-footer">
-                        <span class="blog-date">07 Abr 2026</span>
-                        <a href="#" class="ler-mais">Ler mais &rarr;</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="blog-card">
-                <div class="blog-card-img">
-                    <img src="images/blog-3.jpg" alt="Blog post">
-                </div>
-                <div class="blog-card-body">
-                    <span class="blog-tag associacao">Associação</span>
-                    <h3>ACBrasil lança programa de mentoria para jovens do mercado financeiro</h3>
-                    <p>Iniciativa conecta profissionais experientes a novos talentos que estão ingressando no setor.</p>
-                    <div class="blog-card-footer">
-                        <span class="blog-date">05 Abr 2026</span>
-                        <a href="#" class="ler-mais">Ler mais &rarr;</a>
-                    </div>
-                </div>
-            </div>
+        <div class="blog-grid" id="blog-grid">
+            <!-- Cards de artigos recentes -->
         </div>
 
     </div>
@@ -365,13 +319,13 @@
             <!-- Coluna direita — imagem + newsletter badge -->
             <div class="associe-image-col">
                 <img src="images/associe-photo.jpg" alt="Profissionais ACBrasil" class="associe-photo">
-                <div class="newsletter-badge">
+                <div class="newsletter-badge" id="newsletter-badge">
                     <span class="newsletter-icon">✉️</span>
                     <div>
-                        <small>Newsletter semanal</small>
-                        <strong>Receba análises toda sexta-feira</strong>
+                        <small id="newsletter-kicker">Newsletter semanal</small>
+                        <strong id="newsletter-title">Receba análises toda sexta-feira</strong>
                     </div>
-                    <a href="#" class="btn-assinar">Assinar</a>
+                    <a href="#" class="btn-assinar" id="newsletter-link">Assinar</a>
                 </div>
             </div>
         </div>
@@ -430,7 +384,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

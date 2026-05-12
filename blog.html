@@ -9,82 +9,123 @@
 </head>
 
 <body style="background-color: lightgray;">
-    
+
     <header class="top-header">
-    <nav class="nav-container">
+        <nav class="nav-container">
 
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo-acb.png" alt="Logo ACB">
-        </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo-acb.png" alt="Logo ACB">
+            </div>
 
-        <!-- Menu central -->
-        <div class="menu">
-            <a href="index.html" class="active">Início</a>
-            <a href="quemsomos.html">Quem somos</a>
-            <a href="blog.html">Blog</a>
-            <a href="membros.html">Membros</a>
-            <a href="contato.html">Contato</a>
-        </div>
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="index.html" class="active">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="blog.html">Blog</a>
+                <a href="membros.html">Membros</a>
+                <a href="contato.html">Contato</a>
+            </div>
 
-        <!-- Botões direita -->
-        <div class="actions">
-            <a href="login.html" class="btn-outline">Entrar</a>
-            <a href="cadastro.html" class="btn-solid">Área de Associados</a>
-        </div>
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="login.html" class="btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn-solid">Área de Associados</a>
+            </div>
 
-    </nav>
-</header>
+        </nav>
+    </header>
     <main>
+        <!-- Topo: Imagem de fundo com overlay azul -->
+        <div class="hero-banner-quem-somos">
+            <div class="container-quem-somos">
+                <!-- textos da seção de hero -->
+                <div class="content-wrapper">
+                    <span class="badge">INSTITUCIONAL</span>
+                    <h1>Quem somos e por que existimos</h1>
+                    <p>
+                        A ACBrasil nasceu da necessidade de uma entidade forte,
+                        independente e comprometida com o desenvolvimento do
+                        mercado de capitais no Brasil.
+                    </p>
+                </div>
+            </div>
+        </div>
 
+        <section class="blog-section">
+            <div class="section-container">
+
+                <div class="section-label">
+                    <span class="label-bar"></span>
+                    Blog &amp; Newsletter
+                </div>
+
+                <div class="blog-gallery-block">
+                    <div class="section-header-row">
+                        <h2>Artigos</h2>
+                    </div>
+                    <div class="blog-grid" id="blog-grid-artigos"></div>
+                    <nav class="blog-pagination" id="blog-pagination-artigos" aria-label="Paginação de artigos"></nav>
+                </div>
+
+                <div class="blog-gallery-block blog-gallery-block-newsletter">
+                    <div class="section-header-row">
+                        <h2>Newsletter</h2>
+                    </div>
+                    <div class="blog-grid" id="blog-grid-newsletter"></div>
+                    <nav class="blog-pagination" id="blog-pagination-newsletter" aria-label="Paginação de newsletters"></nav>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer class="footer">
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <!-- Coluna 1 - Logo + descrição -->
-        <div class="footer-col">
-            <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
-            <p>
-                A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
-                conselheiros nas organizações públicas e privadas.
-            </p>
+            <!-- Coluna 1 - Logo + descrição -->
+            <div class="footer-col">
+                <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>
+                    A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Institucional -->
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <!-- Coluna 3 - Conteúdo -->
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                <p>(11) 1234-5678</p>
+                <p>contato@acb.com.br</p>
+            </div>
+
         </div>
 
-        <!-- Coluna 2 - Institucional -->
-        <div class="footer-col">
-            <h3>Institucional</h3>
-            <a href="index.html">Início</a>
-            <a href="quemsomos.html">Quem somos</a>
-            <a href="contato.html">Contato</a>
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
         </div>
-
-        <!-- Coluna 3 - Conteúdo -->
-        <div class="footer-col">
-            <h3>Conteúdo</h3>
-            <a href="blog.html">Blog</a>
-            <a href="eventos.html">Eventos</a>
-        </div>
-
-        <!-- Coluna 4 - Contato -->
-        <div class="footer-col">
-            <h3>Contato</h3>
-            <p>Rua Exemplo, 123 - São Paulo, SP</p>
-            <p>(11) 1234-5678</p>
-            <p>contato@acb.com.br</p>
-        </div>
-
-    </div>
-
-    <!-- Linha inferior -->
-    <div class="footer-bottom">
-        <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
-        <div class="footer-links">
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos de Uso</a>
-        </div>
-    </div>
-</footer>
-
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

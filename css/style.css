@@ -859,7 +859,7 @@ p {
 .blog-card-img img {
   width: 100%;
   border-bottom: 1px solid black;
-  height: 180px;
+  height: 250px;
   object-fit: cover;
   display: block;
 }
@@ -929,6 +929,68 @@ p {
 
 .ler-mais:hover {
   text-decoration: underline;
+}
+
+/* Bloco de cada galeria (Artigos / Newsletter) na página do blog */
+.blog-gallery-block {
+  margin-bottom: 48px;
+}
+
+.blog-gallery-block:last-child {
+  margin-bottom: 0;
+}
+
+.blog-gallery-block-newsletter {
+  margin-top: 8px;
+}
+
+.blog-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #666;
+  font-size: 15px;
+  padding: 32px 16px;
+  margin: 0;
+}
+
+/* Controles de paginação abaixo de cada grade */
+.blog-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.blog-pagination button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #1a4fc4;
+  background: #fff;
+  color: #1a4fc4;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.blog-pagination button:hover:not(:disabled) {
+  background: #1a4fc4;
+  color: #fff;
+}
+
+.blog-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.blog-pagination-info {
+  font-size: 14px;
+  color: #555;
+  min-width: 8em;
+  text-align: center;
 }
 
 /* === SEÇÃO: MERCADO === */

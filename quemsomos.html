@@ -12,30 +12,36 @@
 <body style="background-color: lightgray;">
     
     <header class="top-header">
-    <nav class="nav-container">
+      <nav class="nav-container">
 
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/logo-acb.png" alt="Logo ACB">
-        </div>
+          <!-- Logo -->
+          <div class="logo">
+              <img src="images/logo-acb.png" alt="Logo ACB">
+          </div>
 
-        <!-- Menu central -->
-        <div class="menu">
-            <a href="index.html" class="active">Início</a>
-            <a href="quemsomos.html">Quem somos</a>
-            <a href="blog.html">Blog</a>
-            <a href="membros.html">Membros</a>
-            <a href="contato.html">Contato</a>
-        </div>
+          <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
 
-        <!-- Botões direita -->
-        <div class="actions">
-            <a href="login.html" class="btn-outline">Entrar</a>
-            <a href="cadastro.html" class="btn-solid">Área de Associados</a>
-        </div>
+          <!-- Menu central -->
+          <div class="menu">
+              <a href="index.html" class="active">Início</a>
+              <a href="quemsomos.html">Quem somos</a>
+              <a href="blog.html">Blog</a>
+              <a href="membros.html">Membros</a>
+              <a href="contato.html">Contato</a>
+          </div>
 
-    </nav>
-</header>
+          <!-- Botões direita -->
+          <div class="actions">
+              <a href="login.html" class="btn-outline">Entrar</a>
+              <a href="cadastro.html" class="btn-solid">Área de Associados</a>
+          </div>
+
+      </nav>
+    </header>
     <main>
         <section class="about-section">
             <!-- Topo: Imagem de fundo com overlay azul -->
@@ -101,12 +107,13 @@
               </div>
             </div>
           </section>
+          <!-- Seção dos pilares da associação -->
           <section class="pilares-section">
             <div class="container">
-              <header class="pilares-header">
+              <div class="pilares-header">
                 <span class="pilares-badge">PILARES</span>
                 <h2 class="title">O que orienta nossa atuação</h2>
-              </header>
+              </div>
               <div class="pilares-wrapper">
                 <div class="pilar-item">
                   <span class="pilar-icon" aria-hidden="true">
@@ -201,6 +208,7 @@
     </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 
 </html>

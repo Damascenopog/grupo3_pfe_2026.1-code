@@ -1376,6 +1376,116 @@ p {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     object-fit: cover;
   }
+
+  /* ESTILIZAÇÃO DA SEÇÃO DE PILARES */
+  .pilares-section {
+    background-color: var(--bg-light);
+    padding: 80px 20px;
+  }
+
+  .pilares-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .pilares-header {
+    text-align: center;
+    margin-bottom: 42px;
+  }
+
+  .pilares-header .title {
+    color: #1a1a66;
+    margin-bottom: 0;
+  }
+
+  .pilares-badge {
+    display: inline-block;
+    background-color: #eef2fb;
+    color: #1a4fc4;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  .pilares-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .pilar-item {
+    background-color: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    padding: 28px;
+    min-height: 205px;
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s;
+  }
+
+  .pilar-item:hover {
+    box-shadow: 0 4px 20px rgba(26, 79, 196, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .pilar-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #eef2fb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a4fc4;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  .pilar-item h3 {
+    color: #1a1a66;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .pilar-item p {
+    color: var(--text-color);
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin: 0;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 900px) {
+    .pilares-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .pilares-section {
+      padding: 64px 20px;
+    }
+
+    .pilares-header .title {
+      font-size: 1.9rem;
+    }
+
+    .pilares-wrapper {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .pilar-item {
+      min-height: auto;
+    }
+  }
   
 
 /** =============================================

@@ -14,6 +14,25 @@ const newsletterTitle = document.getElementById("newsletter-title");
 const newsletterKicker = document.getElementById("newsletter-kicker");
 const newsletterLink = document.getElementById("newsletter-link");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navContainer = document.querySelector(".nav-container");
+
+  if (!menuToggle || !navContainer) return;
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navContainer.classList.toggle("nav-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navContainer.querySelectorAll(".menu a, .actions a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navContainer.classList.remove("nav-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+});
+
 // LISTAS FILTRADAS E PÁGINA ATUAL PARA CADA GALERIA (APENAS USADO EM blog.html)
 const estadoGalerias = {
   artigos: { lista: [], pagina: 1 },
@@ -202,8 +221,15 @@ const renderizarBlog = (posts) => {
 
 // PONTO DE ENTRADA AO CARREGAR O SCRIPT: USA async/await PARA AGUARDAR A API
 (async () => {
+  if (!blogGrid && !gridArtigos && !gridNewsletter) return;
+
   const posts = await postsApi();
-  if (!posts?.length) return;
+  if (!posts?.length) {
+    renderizarPostsNoContainer(blogGrid, []);
+    renderizarPostsNoContainer(gridArtigos, []);
+    renderizarPostsNoContainer(gridNewsletter, []);
+    return;
+  }
   const isBlogPage = /blog\.html$/i.test(window.location.pathname);
   if (isBlogPage && gridArtigos && gridNewsletter) {
     estadoGalerias.artigos.lista = posts.filter(artigo);
@@ -216,6 +242,6 @@ const renderizarBlog = (posts) => {
   }
 
   // HOME (OU OUTRAS PÁGINAS COM #blog-grid): APENAS OS TRÊS ARTIGOS MAIS RECENTES
-  const artigosRecentes = posts.filter(postEhArtigo).slice(0, 3);
+  const artigosRecentes = posts.filter(artigo).slice(0, 3);
   renderizarBlog(artigosRecentes);
 })();

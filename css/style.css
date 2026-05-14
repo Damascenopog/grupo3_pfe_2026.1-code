@@ -2716,4 +2716,51 @@ p {
     .stat-cad-item strong { font-size: 28px; }
     .cta-final-card { padding: 32px 24px; }
     .cta-final-card h3 { font-size: 22px; }
+    .stats-cad-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .hero-cad-buttons { flex-direction: column; align-items: stretch; }
+    .hero-cad-buttons .btn-cad-primary,
+    .hero-cad-buttons .btn-cad-ghost { justify-content: center; }
+    .cta-final-buttons { flex-direction: column; }
+}
+
+/* =============================================
+   RESPONSIVO GLOBAL — HEADER E FOOTER
+   (vale para todas as páginas do site)
+   ============================================= */
+@media (max-width: 860px) {
+    .top-header { padding: 12px 20px; }
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+    }
+    .menu a { font-size: 14px; padding: 4px 8px; }
+    .logo img { height: 42px; }
+    .actions { gap: 8px; }
+    .btn-outline, .btn-solid { padding: 6px 12px; font-size: 13px; }
+
+    .footer { padding: 40px 24px 20px; }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .footer-links a { margin-left: 0; margin-right: 14px; }
+}
+
+@media (max-width: 520px) {
+    .nav-container { justify-content: space-between; }
+    .actions { width: 100%; justify-content: center; }
+    .footer-container { grid-template-columns: 1fr; gap: 24px; text-align: left; }
 }

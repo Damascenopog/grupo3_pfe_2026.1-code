@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Artigo - ACBrasil</title>
+</head>
+
+<body style="background-color: lightgray;">
+
+    <header class="top-header">
+        <nav class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="images/logo-acb.png" alt="Logo ACB">
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="index.html" class="active">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="blog.html">Blog</a>
+                <a href="membros.html">Membros</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="login.html" class="btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn-solid">Associe-se</a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="artigo-container">
+            <button class="btn-voltar" type="button" aria-label="Voltar">
+                <span class="btn-voltar-icon">←</span> Voltar
+            </button>
+
+            <article class="artigo-completo" id="artigo-content">
+                <div class="artigo-loading">
+                    <p>Carregando artigo...</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Logo + descrição -->
+            <div class="footer-col">
+                <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>
+                    A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Institucional -->
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <!-- Coluna 3 - Conteúdo -->
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                <p>(11) 1234-5678</p>
+                <p>contato@acb.com.br</p>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script inline para renderizar o artigo imediatamente -->
+    <script>
+        (function() {
+            function renderizarArtigoImediatamente() {
+                const postStr = localStorage.getItem('currentPost');
+                const container = document.getElementById('artigo-content');
+                
+                if (!container || !postStr) return;
+                
+                try {
+                    const post = JSON.parse(postStr);
+                    const titulo = post.title?.rendered || 'Sem título';
+                    const autor = post._embedded?.author?.[0]?.name || 'Autor desconhecido';
+                    const data = new Date(post.date).toLocaleDateString('pt-BR', { 
+                        day: '2-digit', 
+                        month: 'long', 
+                        year: 'numeric' 
+                    });
+                    const imagem = post._embedded?.['wp:featuredmedia']?.[0]?.source_url || 'images/logo-acb.png';
+                    const conteudo = post.content?.rendered || '<p>Conteúdo não disponível.</p>';
+                    const tag = post.categories?.includes(20) ? 'Artigo' : 'Newsletter';
+                    
+                    document.title = `${titulo} - ACBrasil`;
+                    
+                    container.innerHTML = `
+                        <div class="artigo-header">
+                            <span class="artigo-tag">${tag}</span>
+                            <h1>${titulo}</h1>
+                            <div class="artigo-meta">
+                                <span class="artigo-meta-item"><strong>Por:</strong> ${autor}</span>
+                                <span class="artigo-meta-item"><strong>Data:</strong> ${data}</span>
+                            </div>
+                        </div>
+                        <img src="${imagem}" alt="${titulo}" class="artigo-featured-img">
+                        <div class="artigo-content">${conteudo}</div>
+                    `;
+                } catch (e) {
+                    console.error('Erro ao renderizar:', e);
+                }
+            }
+            
+            function configurarBotaoVoltar() {
+                const btnVoltar = document.querySelector('.btn-voltar');
+                if (!btnVoltar) return;
+                
+                btnVoltar.addEventListener('click', function() {
+                    localStorage.removeItem('currentPost');
+                    window.location.href = 'blog.html';
+                });
+                
+                // Tecla Escape para voltar
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        btnVoltar.click();
+                    }
+                });
+            }
+            
+            // Renderiza imediatamente se o post estiver disponível
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', function() {
+                    renderizarArtigoImediatamente();
+                    configurarBotaoVoltar();
+                });
+            } else {
+                renderizarArtigoImediatamente();
+                configurarBotaoVoltar();
+            }
+        })();
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/artigo.js"></script>
+</body>
+
+</html>

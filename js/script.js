@@ -35,8 +35,66 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // LISTAS FILTRADAS E PÁGINA ATUAL PARA CADA GALERIA (APENAS USADO EM blog.html)
 const estadoGalerias = {
-  artigos: { lista: [], pagina: 1 },
-  newsletter: { lista: [], pagina: 1 },
+  artigos: { lista: [], listaOriginal: [], pagina: 1 },
+  newsletter: { lista: [], listaOriginal: [], pagina: 1 },
+};
+
+// EXTRAI NOME DO AUTOR DO POST A PARTIR DOS DADOS EMBUTIDOS
+const obterNomeAutor = (post) => {
+  return post?._embedded?.author?.[0]?.name || "";
+};
+
+// FILTRA POSTS POR TERMO DE BUSCA (TÍTULO OU AUTOR)
+const filtrarPostsPorBusca = (posts, termo) => {
+  if (!termo.trim()) return posts;
+  const termoLower = termo.toLowerCase();
+  return posts.filter((post) => {
+    const titulo = (post.title?.rendered || "").toLowerCase();
+    const autor = obterNomeAutor(post).toLowerCase();
+    return titulo.includes(termoLower) || autor.includes(termoLower);
+  });
+};
+
+// CONFIGURA OS LISTENERS DE BUSCA PARA AMBAS AS GALERIAS
+const configurarBuscaBlog = () => {
+  const tipos = ["artigos", "newsletter"];
+  
+  tipos.forEach((tipo) => {
+    const inputBusca = document.getElementById(`blog-search-${tipo}`);
+    const btnLimpar = document.getElementById(`blog-search-clear-${tipo}`);
+    
+    if (!inputBusca || !btnLimpar) return;
+    
+    // LISTENER PARA ENTRADA DE TEXTO DE BUSCA
+    inputBusca.addEventListener("input", (e) => {
+      const termo = e.target.value;
+      
+      // ATUALIZA VISIBILIDADE DO BOTÃO LIMPAR
+      if (termo.trim()) {
+        btnLimpar.classList.add("active");
+      } else {
+        btnLimpar.classList.remove("active");
+      }
+      
+      // FILTRA A LISTA E RESETA PAGINAÇÃO
+      estadoGalerias[tipo].lista = filtrarPostsPorBusca(
+        estadoGalerias[tipo].listaOriginal,
+        termo
+      );
+      estadoGalerias[tipo].pagina = 1;
+      redesenharGaleriaBlog(tipo);
+    });
+    
+    // LISTENER PARA BOTÃO LIMPAR
+    btnLimpar.addEventListener("click", () => {
+      inputBusca.value = "";
+      inputBusca.focus();
+      btnLimpar.classList.remove("active");
+      estadoGalerias[tipo].lista = [...estadoGalerias[tipo].listaOriginal];
+      estadoGalerias[tipo].pagina = 1;
+      redesenharGaleriaBlog(tipo);
+    });
+  });
 };
 
 // FUNÇÃO QUE FAZ A REQUISIÇÃO NA API DE DADOS
@@ -123,7 +181,7 @@ const htmlCardPost = (post) => {
   const titulo = post.title?.rendered;
   const resumo = limitarTexto(post.excerpt?.rendered, 140);
   const data = formatarData(post.date);
-  const url = post.link || "#";
+  const url = `artigo.html?id=${post.id}`;
   const imagem = obterImagem(post);
   const tag = obterTag(post);
   return `
@@ -137,7 +195,7 @@ const htmlCardPost = (post) => {
             <p>${resumo}</p>
             <div class="blog-card-footer">
               <span class="blog-date">${data}</span>
-              <a href="${url}" class="ler-mais" target="_blank" rel="noopener noreferrer">Ler mais &rarr;</a>
+              <a href="${url}" class="ler-mais" data-post-id="${post.id}">Ler mais &rarr;</a>
             </div>
           </div>
         </div>
@@ -153,6 +211,19 @@ const renderizarPostsNoContainer = (container, posts) => {
     return;
   }
   container.innerHTML = posts.map((post) => htmlCardPost(post)).join("");
+  
+  // CONFIGURA OS LISTENERS DOS LINKS "LER MAIS" PARA ARMAZENAR O POST NO LOCALSTORAGE
+  container.querySelectorAll("a.ler-mais").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const postId = link.getAttribute("data-post-id");
+      const post = posts.find((p) => p.id.toString() === postId);
+      if (post) {
+        // ARMAZENA O POST NO LOCALSTORAGE PARA A PÁGINA DE ARTIGO
+        localStorage.setItem("currentPost", JSON.stringify(post));
+        console.log("Post armazenado no localStorage:", postId);
+      }
+    });
+  });
 };
 
 // CALCULA QUANTAS PÁGINAS EXISTEM PARA UMA LISTA E UM TAMANHO DE PÁGINA
@@ -232,12 +303,21 @@ const renderizarBlog = (posts) => {
   }
   const isBlogPage = /blog\.html$/i.test(window.location.pathname);
   if (isBlogPage && gridArtigos && gridNewsletter) {
-    estadoGalerias.artigos.lista = posts.filter(artigo);
-    estadoGalerias.newsletter.lista = posts.filter(newsletter);
+    const artigosCompleto = posts.filter(artigo);
+    const newsletterCompleto = posts.filter(newsletter);
+    
+    estadoGalerias.artigos.lista = artigosCompleto;
+    estadoGalerias.artigos.listaOriginal = artigosCompleto;
+    estadoGalerias.newsletter.lista = newsletterCompleto;
+    estadoGalerias.newsletter.listaOriginal = newsletterCompleto;
     estadoGalerias.artigos.pagina = 1;
     estadoGalerias.newsletter.pagina = 1;
+    
     redesenharGaleriaBlog("artigos");
     redesenharGaleriaBlog("newsletter");
+    
+    // INICIALIZA OS LISTENERS DE BUSCA
+    configurarBuscaBlog();
     return;
   }
 

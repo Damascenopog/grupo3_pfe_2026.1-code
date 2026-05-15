@@ -3767,3 +3767,50 @@ svg {
     padding: 20px;
   }
 }
+/* =============================================
+   PÁGINA LOGIN
+   Cole este bloco ao final do style.css
+   ============================================= */
+
+.login-section {
+    min-height: calc(100vh - 80px - 280px); /* tela cheia descontando header e footer */
+    background-color: #f4f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 460px;
+}
+
+/* Sobrescreve o card para ficar centralizado e com largura total */
+.login-card-standalone {
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(26, 26, 102, 0.12);
+}
+
+.login-voltar {
+    font-size: 13.5px;
+    color: #888;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.login-voltar:hover {
+    color: #1a4fc4;
+}
+
+@media (max-width: 500px) {
+    .login-section {
+        padding: 40px 16px;
+        align-items: flex-start;
+    }
+}

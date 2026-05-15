@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/theme.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/layout.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/blog.css">
 </head>
 
-<body style="background-color: lightgray;">
+<body>
 
 <!-- =============================================
      HEADER (REPLICADO PARA TODAS AS PAGINAS)
@@ -18,7 +25,7 @@
 
             <!-- Logo -->
             <div class="logo">
-                <img src="images/logo-acb.png" alt="Logo ACB">
+                <img src="assets/images/logo-acb.png" alt="Logo ACB">
             </div>
 
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -68,26 +75,6 @@
                     </div>
                 </div>
             </div>
-            <!-- PEQUENA SEÇÃO ABAIXO DOS TEXTOS PRINCIPAIS, A MESMA EXIBE INFORMAÇÕES SOBRE A EMPRESA -->
-            <aside>
-                <!-- DADOS FICTICIOS POR ENQUANTO-->
-                <div>
-                    <strong>X+</strong>
-                    <span>Associados ativos</span>
-                </div>
-                <div>
-                    <strong>X anos</strong>
-                    <span>De atuação</span>
-                </div>
-                <div>
-                    <strong>X+</strong>
-                    <span>Eventos realizados</span>
-                </div>
-                <div>
-                    <strong>X+</strong>
-                    <span>Artigos publicados</span>
-                </div>
-            </aside>
         </section>
         <!-- FIM DA SEÇÃO HERO-->
 
@@ -106,7 +93,7 @@
 
             <!-- Imagem / card esquerda -->
             <div class="destaque-image-card">
-                <img src="images/fundo-hero.jpg" alt="Fórum Nacional de Mercado de Capitais 2026">
+                <img src="./assets/images/fundo-hero.jpg" alt="Fórum Nacional de Mercado de Capitais 2026">
                 <div class="destaque-tag">Evento</div>
                 <div class="destaque-image-caption">
                     <h3>Fórum Nacional de Mercado de Capitais 2026</h3>
@@ -238,38 +225,20 @@
 
         <div class="indicadores-grid">
             <div class="indicador-card">
-                <span class="indicador-label">IBOV</span>
-                <span class="indicador-value">132.480</span>
-                <span class="indicador-change up">▲ +1,24%</span>
+                <span class="indicador-label"></span>
+                <span class="indicador-value"></span>
+                <span class="indicador-change up"></span>
             </div>
             <div class="indicador-card">
-                <span class="indicador-label">CDI</span>
-                <span class="indicador-value">14,75%</span>
-                <span class="indicador-change neutral">aa</span>
+                <span class="indicador-label"></span>
+                <span class="indicador-value"></span>
+                <span class="indicador-change neutral"></span>
             </div>
             <div class="indicador-card">
-                <span class="indicador-label">IPCA</span>
-                <span class="indicador-value">4,83%</span>
-                <span class="indicador-change down">▼ +0,18pp</span>
+                <span class="indicador-label"></span>
+                <span class="indicador-value"></span>
+                <span class="indicador-change down"></span>
             </div>
-            <div class="indicador-card">
-                <span class="indicador-label">USD/BRL</span>
-                <span class="indicador-value">R$ 5,42</span>
-                <span class="indicador-change down">▼ -0,31%</span>
-            </div>
-            <div class="indicador-card">
-                <span class="indicador-label">B3 Vol.</span>
-                <span class="indicador-value">R$ 28,4bi</span>
-                <span class="indicador-change up">▲ +5,7%</span>
-            </div>
-        </div>
-
-        <div class="mercado-cta-banner">
-            <div class="mercado-cta-text">
-                <strong>Análises exclusivas para associados</strong>
-                <p>Acesse relatórios aprofundados sobre o cenário macroeconômico e de mercado preparados pela equipe técnica da ACBrasil.</p>
-            </div>
-            <a href="#" class="btn-primary">Acessar relatórios &rarr;</a>
         </div>
 
     </div>
@@ -324,7 +293,7 @@
 
             <!-- Coluna direita — imagem + newsletter badge -->
             <div class="associe-image-col">
-            <img src="images/reuniao-quem-somos.jpg" alt="Profissionais ACBrasil" class="associe-photo">
+            <img src="./assets/images/fundo-hero-quem-somos.jpg" alt="Profissionais ACBrasil" class="associe-photo">
                 <div class="newsletter-badge" id="newsletter-badge">
                     <span class="newsletter-icon">✉️</span>
                     <div>
@@ -349,7 +318,7 @@
 
             <!-- Coluna 1 - Logo + descrição -->
             <div class="footer-col">
-                <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <img src="./assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
                 <p>
                     A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
                     conselheiros nas organizações públicas e privadas.
@@ -390,7 +359,9 @@
             </div>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script type="module" src="js/pages/indicadores.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

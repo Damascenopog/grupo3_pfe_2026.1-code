@@ -1,0 +1,16 @@
+:root {
+  --primary-blue: #003399;
+  --text-color: #444;
+  --bg-light: #f4f7ff;
+  --accent-yellow: #ffcc00;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
+img,
+svg {
+  max-width: 100%;
+}

@@ -1,0 +1,93 @@
+.container-quem-somos {
+  max-width: 768px;
+  font-weight: bold;
+  margin: 0 380px;
+  padding: 0 20px;
+  font-family: "Montserrat", sans-serif;
+}
+.content-wrapper {
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hero-banner-quem-somos {
+  height: 500px;
+  background:
+    linear-gradient(to right, rgba(26, 35, 126, 0.9), rgba(26, 35, 126, 0.4)),
+    url("../images/fundo-hero-quem-somos.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.hero-banner-contato {
+  height: 420px;
+  background:
+    linear-gradient(to right, rgba(10, 20, 80, 0.92), rgba(26, 35, 126, 0.5)),
+    url("../images/fundo-hero-contato.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+.hero-banner-contato:not([style]) {
+  background-color: #0f1a4a;
+  background-image:
+    radial-gradient(
+      ellipse at 70% 50%,
+      rgba(37, 99, 235, 0.35) 0%,
+      transparent 60%
+    ),
+    linear-gradient(135deg, #0a1450 0%, #1a237e 100%);
+}
+.badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffc107;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: fit-content;
+}
+.hero-banner-quem-somos h1,
+.hero-banner-contato h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+.hero-banner-quem-somos p,
+.hero-banner-contato p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .container-quem-somos {
+    width: min(100%, 1200px);
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .hero-banner-quem-somos h1,
+  .hero-banner-contato h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-banner-quem-somos,
+  .hero-banner-contato {
+    height: auto;
+    padding: 60px 0;
+  }
+  .hero-banner-quem-somos h1,
+  .hero-banner-contato h1 {
+    font-size: 30px;
+  }
+  .container-quem-somos {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

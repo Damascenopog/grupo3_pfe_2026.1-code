@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base/reset.css">
+    <link rel="stylesheet" href="css/base/variables.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/base/theme.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/layout.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/pages/membros.css">
     <title>Membros — ACBrasil</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -16,7 +23,7 @@
 <header class="top-header">
     <nav class="nav-container">
         <div class="logo">
-            <img src="images/logo-acb.png" alt="Logo ACB">
+            <img src="assets/images/logo-acb.png" alt="Logo ACB">
         </div>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
             <span></span>
@@ -314,6 +321,22 @@
 </section>
 
 <!-- =============================================
+     DIRETÓRIO DE MEMBROS
+     ============================================= -->
+<section class="mb-directory-section" style="padding: 80px 0; background-color: #fff;">
+    <div class="section-container">
+        <div class="section-label" style="justify-content: center; margin-bottom: 10px;">
+            <span class="label-bar"></span>
+            Rede de Associados
+        </div>
+        <h2 class="as-section-title" style="text-align: center;">Conheça nossos membros</h2>
+        <p class="as-section-sub" style="text-align: center; margin-bottom: 40px;">Profissionais que já fazem parte da nossa comunidade.</p>
+        
+        <div id="members-grid" class="members-grid"></div>
+    </div>
+</section>
+
+<!-- =============================================
      CTA FINAL
      ============================================= -->
 <section class="mb-cta-section">
@@ -335,7 +358,7 @@
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-col">
-            <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+            <img src="./assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
             <p>A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como conselheiros nas organizações públicas e privadas.</p>
         </div>
         <div class="footer-col">
@@ -381,7 +404,7 @@
         alert('Funcionalidade de login será integrada ao sistema de autenticação.');
     }
 </script>
-
+<script src="js/navbar.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

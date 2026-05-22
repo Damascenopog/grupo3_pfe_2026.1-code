@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./src/css/blog.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./src/css/home.css">
 </head>
 
-<body style="background-color: lightgray;">
+<body>
 
-<!-- =============================================
+    <!-- =============================================
      HEADER (REPLICADO PARA TODAS AS PAGINAS)
      ============================================= -->
     <header class="top-header">
@@ -18,7 +20,7 @@
 
             <!-- Logo -->
             <div class="logo">
-                <img src="images/logo-acb.png" alt="Logo ACB">
+                <img src="./assets/images/logo-acb.png" alt="Logo ACB">
             </div>
 
             <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -29,17 +31,17 @@
 
             <!-- Menu central -->
             <div class="menu">
-                <a href="index.html" class="active">Início</a>
-                <a href="quemsomos.html">Quem somos</a>
-                <a href="blog.html">Blog</a>
-                <a href="membros.html">Membros</a>
-                <a href="contato.html">Contato</a>
+                <a href="./index.html" class="active">Início</a>
+                <a href="./views/quemsomos.html">Quem somos</a>
+                <a href="./views/blog.html">Blog</a>
+                <a href="./views/membros.html">Membros</a>
+                <a href="./views/contato.html">Contato</a>
             </div>
 
             <!-- Botões direita -->
             <div class="actions">
-                <a href="login.html" class="btn-outline">Entrar</a>
-                <a href="cadastro.html" class="btn-solid">Associe-se</a>
+                <a href="./views/login.html" class="btn-outline">Entrar</a>
+                <a href="./views/cadastro.html" class="btn-solid">Associe-se</a>
             </div>
 
         </nav>
@@ -47,273 +49,187 @@
     <!-- FIM DO HEADER -->
 
     <main>
-<!-- =============================================
+        <!-- =============================================
         SEÇÃO HERO (DESTAQUE INICIAL DA PAGINA)
      ============================================= -->
         <section class="hero">
             <!-- CONTAINER PRINCIPAL DE TEXTOS DA HERO-->
-            <div class="hero-content"> 
+            <div class="hero-content">
                 <!-- TEXTOS PRINCIPAIS DA HERO -->
                 <div class="hero-text-container">
-                    <h1>Representando quem <span class="highlight">move o mercado</span> financeiro brasileiro.</h1>
+                    <h1>ASSOCIAÇÃO DE <span class="highlight">CONSELHEIROS DO BRASIL</span></h1>
                     <div class="hero-text-description">
-                        <p>A ACBrasil conecta, representa e capacita os agentes do mercado de capitais. Somos a voz do
-                            setor nos
-                            debates que importam.</p>
+                        <p>Aliamos experiência, credibilidade e conhecimento, para orientar e ajudar a construir as
+                            melhores práticas de governança corporativa e otimização de processos.</p>
                     </div>
                     <!-- BOTÕES DA HERO -->
                     <div class="hero-buttons">
-                        <a href="./cadastro.html" class="btn-primary">Quero me associar &rarr;</a>
-                        <a href="./quemsomos.html" class="btn-secondary">Conhecer a ACBrasil</a>
+                        <a href="./views/cadastro.html" class="btn-primary">Quero me associar &rarr;</a>
+                        <a href="./views/quemsomos.html" class="btn-secondary">Conhecer a ACBrasil</a>
                     </div>
                 </div>
             </div>
-            
+        </section>
+
         <!-- FIM DA SEÇÃO HERO-->
 
-<!-- =============================================
+        <section class="mercado-section">
+            <div class="section-container">
+                <div class="indicadores-wrap">
+                    <div class="indicadores-grid" id="indicadores-grid">
+                        <div class="indicador-card">
+                            <span class="indicador-label">POUPANÇA</span>
+                            <span class="indicador-value" id="ibov-value">--</span>
+                            <span class="indicador-change neutral" id="ibov-change">Carregando...</span>
+                            <div class="indicador-spinner" id="ibov-spinner" role="status" aria-live="polite"
+                                aria-label="Carregando indicador POUPANÇA">
+                                <img src="./assets/images/money.jpg" alt="Carregando" class="indicador-spinner-image">
+                            </div>
+                        </div>
+                        <div class="indicador-card">
+                            <span class="indicador-label">CDI</span>
+                            <span class="indicador-value" id="cdi-value">--</span>
+                            <span class="indicador-change neutral" id="cdi-change">Carregando...</span>
+                            <div class="indicador-spinner" id="cdi-spinner" role="status" aria-live="polite"
+                                aria-label="Carregando indicador CDI">
+                                <img src="./assets/images/money.jpg" alt="Carregando" class="indicador-spinner-image">
+                            </div>
+                        </div>
+                        <div class="indicador-card">
+                            <span class="indicador-label">IPCA</span>
+                            <span class="indicador-value" id="ipca-value">--</span>
+                            <span class="indicador-change down" id="ipca-change">Carregando...</span>
+                            <div class="indicador-spinner" id="ipca-spinner" role="status" aria-live="polite"
+                                aria-label="Carregando indicador IPCA">
+                                <img src="./assets/images/money.jpg" alt="Carregando" class="indicador-spinner-image">
+                            </div>
+                        </div>
+                        <div class="indicador-card">
+                            <span class="indicador-label">USD/BRL</span>
+                            <span class="indicador-value" id="usdbrl-value">--</span>
+                            <span class="indicador-change down" id="usdbrl-change">Carregando...</span>
+                            <div class="indicador-spinner" id="usdbrl-spinner" role="status" aria-live="polite"
+                                aria-label="Carregando indicador USD/BRL">
+                                <img src="./assets/images/money.jpg" alt="Carregando" class="indicador-spinner-image">
+                            </div>
+                        </div>
+                        <div class="indicador-card">
+                            <span class="indicador-label">SELIC</span>
+                            <span class="indicador-value" id="selic-value">--</span>
+                            <span class="indicador-change up" id="selic-change">Carregando...</span>
+                            <div class="indicador-spinner" id="selic-spinner" role="status" aria-live="polite"
+                                aria-label="Carregando indicador SELIC">
+                                <img src="./assets/images/money.jpg" alt="Carregando" class="indicador-spinner-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- =============================================
         SEÇÃO: DESTAQUE DA SEMANA
      ============================================= -->
-<section class="destaque-semana">
-    <div class="section-container">
+        <section class="destaque-semana">
+            <div class="section-container">
 
-        <div class="section-label">
-            <span class="label-bar"></span>
-            Destaque da semana
-        </div>
-
-        <div class="destaque-grid">
-
-            <!-- Imagem / card esquerda -->
-            <div class="destaque-image-card">
-                <img src="images/fundo-hero.jpg" alt="Fórum Nacional de Mercado de Capitais 2026">
-                <div class="destaque-tag">Evento</div>
-                <div class="destaque-image-caption">
-                    <h3>Fórum Nacional de Mercado de Capitais 2026</h3>
-                    <p class="destaque-meta">
-                        <span>📅 24 de Abril de 2026</span>
-                        <span>📍 São Paulo, SP</span>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Conteúdo direita -->
-            <div class="destaque-content">
-                <div class="destaque-date-badge">
-                    📅 24 ABR 2026 — 08h30 às 18h
-                </div>
-                <h2>O maior evento do setor financeiro do país retorna com uma edição inédita</h2>
-                <p>O Fórum Nacional de Mercado de Capitais reunirá mais de 800 profissionais, líderes regulatórios e
-                    representantes do setor público para debater os rumos do mercado financeiro em 2026 e além.</p>
-                <ul class="destaque-list">
-                    <li>Painéis com presidentes de B3, CVM e Bacen</li>
-                    <li>Keynote internacional com perspectiva global</li>
-                    <li>Rodada de networking estruturada</li>
-                </ul>
-                <a href="#" class="btn-primary">Garanta sua vaga &rarr;</a>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-<!-- =============================================
-     SEÇÃO: PRÓXIMOS EVENTOS
-     ============================================= -->
-<section class="proximos-eventos">
-    <div class="section-container">
-
-        <div class="section-label">
-            <span class="label-bar"></span>
-            Próximos eventos
-        </div>
-
-        <div class="section-header-row">
-            <h2>Agenda ACBrasil</h2>
-            <a href="eventos.html" class="ver-todos">Ver todos &rarr;</a>
-        </div>
-
-        <div class="eventos-grid">
-            <!-- Card 1 -->
-            <div class="evento-card">
-                <div class="evento-card-top">
-                    <div class="evento-date">
-                        <span class="evento-day">24</span>
-                        <span class="evento-month">ABR</span>
-                    </div>
-                    <span class="evento-tipo forum">Fórum</span>
-                </div>
-                <h3>Fórum de Mercado de Capitais 2026</h3>
-                <p class="evento-local">📍 Centro de Convenções Frei Caneca, SP</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="evento-card">
-                <div class="evento-card-top">
-                    <div class="evento-date">
-                        <span class="evento-day">08</span>
-                        <span class="evento-month">MAI</span>
-                    </div>
-                    <span class="evento-tipo webinar">Webinar</span>
-                </div>
-                <h3>Webinar: Regulação e Inovação no Mercado Financeiro</h3>
-                <p class="evento-local">📍 Online — ao vivo</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="evento-card">
-                <div class="evento-card-top">
-                    <div class="evento-date">
-                        <span class="evento-day">22</span>
-                        <span class="evento-month">MAI</span>
-                    </div>
-                    <span class="evento-tipo encontro">Encontro</span>
-                </div>
-                <h3>Encontro Regional: Cenário Econômico 2026</h3>
-                <p class="evento-local">📍 Hotel Unique, São Paulo</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- =============================================
-     SEÇÃO: BLOG & NEWSLETTER
-     ============================================= -->
-<section class="blog-section">
-    <div class="section-container">
-
-        <div class="section-label">
-            <span class="label-bar"></span>
-            Blog &amp; Newsletter
-        </div>
-
-        <div class="section-header-row">
-            <h2>Artigos recentes</h2>
-            <a href="blog.html" class="ver-todos">Ver todos &rarr;</a>
-        </div>
-
-        <div class="blog-grid" id="blog-grid">
-            <!-- Cards de artigos recentes -->
-        </div>
-
-    </div>
-</section>
-
-<!-- =============================================
-     SEÇÃO: MERCADO — INDICADORES DO DIA
-     ============================================= -->
-<section class="mercado-section">
-    <div class="section-container">
-
-        <div class="section-label">
-            <span class="label-bar label-bar--light"></span>
-            Mercado
-        </div>
-
-        <div class="mercado-header-row">
-            <h2>Indicadores do dia</h2>
-            <span class="mercado-update">Dados com atraso de 15 minutos · 11 Abr 2026</span>
-        </div>
-
-        <div class="indicadores-grid">
-            <div class="indicador-card">
-                <span class="indicador-label">IBOV</span>
-                <span class="indicador-value">132.480</span>
-                <span class="indicador-change up">▲ +1,24%</span>
-            </div>
-            <div class="indicador-card">
-                <span class="indicador-label">CDI</span>
-                <span class="indicador-value">14,75%</span>
-                <span class="indicador-change neutral">aa</span>
-            </div>
-            <div class="indicador-card">
-                <span class="indicador-label">IPCA</span>
-                <span class="indicador-value">4,83%</span>
-                <span class="indicador-change down">▼ +0,18pp</span>
-            </div>
-            <div class="indicador-card">
-                <span class="indicador-label">USD/BRL</span>
-                <span class="indicador-value">R$ 5,42</span>
-                <span class="indicador-change down">▼ -0,31%</span>
-            </div>
-            <div class="indicador-card">
-                <span class="indicador-label">B3 Vol.</span>
-                <span class="indicador-value">R$ 28,4bi</span>
-                <span class="indicador-change up">▲ +5,7%</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<!-- =============================================
-     SEÇÃO: ASSOCIE-SE
-     ============================================= -->
-<section class="associe-section">
-    <div class="section-container">
-
-        <div class="associe-grid">
-            <!-- Coluna esquerda -->
-            <div class="associe-content">
                 <div class="section-label">
                     <span class="label-bar"></span>
-                    Associe-se
-                </div>
-                <h2>Faça parte da maior associação de mercado de capitais do Brasil</h2>
-                <p class="associe-intro">Junte-se a mais de 3.200 profissionais, empresas e instituições que confiam na
-                    ACBrasil para representar seus interesses e ampliar suas conexões no mercado financeiro nacional.</p>
-
-                <div class="associe-beneficios">
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">🏛️</div>
-                        <div>
-                            <strong>Representatividade</strong>
-                            <p>Voz ativa nos debates regulatórios e legislativos do mercado financeiro brasileiro.</p>
-                        </div>
-                    </div>
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">🤝</div>
-                        <div>
-                            <strong>Networking Qualificado</strong>
-                            <p>Acesso a uma rede de profissionais e líderes do mercado de capitais nacional.</p>
-                        </div>
-                    </div>
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">📋</div>
-                        <div>
-                            <strong>Conteúdo Exclusivo</strong>
-                            <p>Relatórios, análises e eventos disponíveis apenas para associados.</p>
-                        </div>
-                    </div>
+                    Webinar Destaque
                 </div>
 
-                <div class="associe-buttons">
-                    <a href="cadastro.html" class="btn-primary">Quero me associar &rarr;</a>
-                    <a href="quemsomos.html" class="btn-outline-dark">Saiba mais</a>
+                <div class="destaque-grid" id="webinar-destaque">
                 </div>
+
             </div>
+        </section>
+        <!-- =============================================
+     SEÇÃO: PRÓXIMOS EVENTOS
+     ============================================= -->
+        <section class="webinar-section">
+            <div class="section-container">
 
-            <!-- Coluna direita — imagem + newsletter badge -->
-            <div class="associe-image-col">
-            <img src="images/reuniao-quem-somos.jpg" alt="Profissionais ACBrasil" class="associe-photo">
-                <div class="newsletter-badge" id="newsletter-badge">
-                    <span class="newsletter-icon">✉️</span>
-                    <div>
-                        <small id="newsletter-kicker">Newsletter semanal</small>
-                        <strong id="newsletter-title">Receba análises toda sexta-feira</strong>
-                    </div>
-                    <a href="#" class="btn-assinar" id="newsletter-link">Assinar</a>
+                <div class="section-label">
+                    <span class="label-bar"></span>
+                    Webinar &amp; Encontros
                 </div>
-            </div>
-        </div>
 
-    </div>
-</section>
+                <div class="section-header-row">
+                    <h2>Webinars</h2>
+                    <a href="./views/eventos.html" class="ver-todos">Ver todos &rarr;</a>
+                </div>
+
+                <div class="eventos-grid webinar-grid" id="webinar-home-grid">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =============================================
+     SEÇÃO: BLOG & NEWSLETTER
+     ============================================= -->
+        <section class="blog-section">
+            <div class="section-container">
+                <div class="section-label">
+                    <span class="label-bar"></span>
+                    Blog &amp; Newsletter
+                </div>
+
+                <div class="section-header-row">
+                    <h2>Artigos recentes</h2>
+                    <a href="./views/blog.html" class="ver-todos">Ver todos &rarr;</a>
+                </div>
+
+                <div class="blog-grid" id="blog-grid">
+                    <!-- Cards de artigos recentes -->
+                </div>
+
+
+                <!-- Vídeos recentes (YouTube) -->
+                <div class="videos-section section-container">
+                    <div class="section-header-row">
+                        <h2>Podcasts</h2>
+                        <a href="https://youtube.com/playlist?list=PL98yzQXxvQjVDk60HdOp9dySACtnJErRO&si=ubJP88t5lplaJEAY"
+                            class="ver-todos" target="_blank" rel="noopener">Ver mais &rarr;</a>
+                    </div>
+                    <div class="videos-grid" id="videos-grid">
+                        <!-- Cards de vídeos serão inseridos via JS -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =============================================
+     SEÇÃO: ASSOCIE-SE
+     ============================================= -->
+        <section class="associe-section">
+            <div class="section-container">
+
+                <div class="associe-grid">
+                    <!-- Coluna esquerda -->
+                    <div class="associe-content">
+                        <div class="section-label">
+                            <span class="label-bar"></span>
+                            Associe-se
+                        </div>
+                        <h2>Faça parte da ACB</h2>
+                        <div class="associe-buttons">
+                            <a href="./views/cadastro.html" class="btn-primary">Quero me associar &rarr;</a>
+                            <a href="./views/quemsomos.html" class="btn-outline-dark">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
 
     </main>
-<!-- =============================================
+    <!-- =============================================
      FOOTER (SERÁ REPLICADO PARA OUTRAS PAGINAS)
      ============================================= -->
     <footer class="footer">
@@ -321,7 +237,7 @@
 
             <!-- Coluna 1 - Logo + descrição -->
             <div class="footer-col">
-                <img src="images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <img src="./assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
                 <p>
                     A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
                     conselheiros nas organizações públicas e privadas.
@@ -331,16 +247,23 @@
             <!-- Coluna 2 - Institucional -->
             <div class="footer-col">
                 <h3>Institucional</h3>
-                <a href="index.html">Início</a>
-                <a href="quemsomos.html">Quem somos</a>
-                <a href="contato.html">Contato</a>
+                <a href="./views/index.html">Início</a>
+                <a href="./views/quemsomos.html">Quem somos</a>
+                <a href="./views/contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
             </div>
 
             <!-- Coluna 3 - Conteúdo -->
             <div class="footer-col">
                 <h3>Conteúdo</h3>
-                <a href="blog.html">Blog</a>
-                <a href="eventos.html">Eventos</a>
+                <a href="./views/blog.html">Blog</a>
+                <a href="./views/eventos.html">Eventos</a>
+                <details class="footer-lgpd">
+                    <summary>LGPD</summary>
+                    <a href="./assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                        Privacidade</a>
+                    <a href="./politica-cookies.pdf" target="_blank" rel="noopener">Política de Cookies</a>
+                </details>
             </div>
 
             <!-- Coluna 4 - Contato -->
@@ -357,11 +280,13 @@
         <div class="footer-bottom">
             <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
             <div class="footer-links">
-                <a href="#">Política de Privacidade</a>
+                <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                    Privacidade</a>
                 <a href="#">Termos de Uso</a>
             </div>
         </div>
     </footer>
+    <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
 </body>
 

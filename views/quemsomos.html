@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../src/css/quemsomos.css">
+    <title>Quem somos</title>
+</head>
+
+<body>
+
+    <!-- =============================================
+     HEADER (REPLICADO PARA TODAS AS PAGINAS)
+     ============================================= -->
+    <header class="top-header">
+        <nav class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB">
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="../index.html" class="active">Início</a>
+                <a href="./quemsomos.html">Quem somos</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./membros.html">Membros</a>
+                <a href="./contato.html">Contato</a>
+            </div>
+
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="./login.html" class="btn-outline">Entrar</a>
+                <a href="./cadastro.html" class="btn-solid">Associe-se</a>
+            </div>
+
+        </nav>
+    </header>
+    <!-- FIM DO HEADER -->
+
+    <main>
+        <section class="about-section">
+            <!-- Topo: Imagem de fundo com overlay azul -->
+            <div class="hero-banner-quem-somos">
+                <div class="container-quem-somos">
+                    <!-- textos da seção de hero -->
+                    <div class="content-wrapper">
+                        <span class="badge">INSTITUCIONAL</span>
+                        <h1>Quem somos e por que existimos</h1>
+                        <p style="color: #ffcc00;">
+                            A ACBrasil nasceu da necessidade de uma entidade forte,
+                            independente e comprometida com o desenvolvimento do
+                            mercado de capitais no Brasil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção sobre missão e um pouco da historia da acbrasil -->
+        <section class="mission-section">
+            <div class="container">
+                <!--Article com conteudo textual da seção-->
+                <article class="mission-content">
+                    <header>
+                        <span class="subtitle">NOSSA HISTÓRIA</span>
+                    </header>
+
+                    <div class="description">
+                        <p>
+                            Fundada em 2022, a Associação de Conselheiros do Brasil – ACB – nasce com intuito de
+                            despertar a consciência sobre a importância e a necessidade da adoção da governança,
+                            influenciando e transformando positivamente a realidade das empresas brasileiras, em
+                            especial as PMEs.
+                            Aliamos experiência, credibilidade e conhecimento, para orientar e ajudar a construir as
+                            melhores práticas de governança corporativa e otimização de processos
+                        </p>
+                        <p>
+                            Acreditamos que disseminar o conhecimento, educar e incluir as PMEs no universo da
+                            governança corporativa, é o caminho para o desenvolvimento e crescimento forte e sustentável
+                            do mercado brasileiro. </p>
+                    </div>
+                </article>
+                <!-- imagem de seção -->
+                <div class="mission-image">
+                    <img src="../assets/images/reuniao-quem-somos.jpg"
+                        alt="Equipe da ACBrasil reunida em uma sala de conferências discutindo dados em uma tela.">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção dos pilares da associação -->
+        <section class="pilares-section">
+            <div class="container">
+                <div class="pilares-header">
+                    <h2 class="title">O que fazemos?</h2>
+                    <div class="pilares-intro">
+                        <p>
+                            Nós da Associação de Conselheiros do Brasil (ACB) temos um corpo de executivos com larga
+                            experiência e com reputação para implementar ou desenvolver conselhos corporativos.
+                        </p>
+
+                        <p>
+                            Também auxiliamos empresas, conselhos e comitês executivos na implementação de boards, no
+                            desenvolvimento e desdobramento de estratégia e em temas mais específicos, como:
+                        </p>
+                    </div>
+                    <ul class="pilares-list" aria-label="Temas de atuação da ACB">
+                        <li>Internacionalização</li>
+                        <li>Digitalização</li>
+                        <li>Fusões e aquisições</li>
+                        <li>Cultura organizacional</li>
+                        <li>Liderança</li>
+                        <li>Sucessão</li>
+                        <li>Sustentabilidade</li>
+                        <li>Logística</li>
+                        <li>Diversidade</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="fundadores-section" id="fundadores">
+            <div class="fundadores-shell">
+                <div class="fundadores-header">
+                    <span class="fundadores-badge">ASSOCIADOS FUNDADORES</span>
+                    <p>
+                        Conheça os associados fundadores e suas trajetórias
+                    </p>
+                </div>
+
+                <div class="fundadores-grid" id="fundadores-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="social-section" aria-labelledby="social-section-title">
+            <div class="social-shell">
+                <div class="social-header">
+                    <span class="social-badge">VEJA MAIS SOBRE NÓS</span>
+                    <h2 id="social-section-title">Nos acompanhe nas redes sociais</h2>
+                    <p>
+                        Fique por dentro das novidades, conteúdos e atualizações da ACBrasil nos nossos canais oficiais.
+                    </p>
+                </div>
+
+                <div class="social-grid">
+                    <a class="social-card social-card--linkedin"
+                        href="https://www.linkedin.com/company/associacao-de-conselheiros-do-brasil/" target="_blank"
+                        rel="noopener">
+                        <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+                        <span class="social-name">LinkedIn</span>
+                        <span class="social-handle">associacao de conselheiros do brasil</span>
+                    </a>
+
+                    <a class="social-card social-card--youtube" href="https://www.youtube.com/@acbrasil" target="_blank"
+                        rel="noopener">
+                        <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+                        <span class="social-name">YouTube</span>
+                        <span class="social-handle">@acbrasil</span>
+                    </a>
+
+                    <a class="social-card social-card--instagram" href="https://www.instagram.com/acbrasil.oficial/"
+                        target="_blank" rel="noopener">
+                        <span class="social-icon" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+                        <span class="social-name">Instagram</span>
+                        <span class="social-handle">@acbrasil.oficial</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Logo + descrição -->
+            <div class="footer-col">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>
+                    A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Institucional -->
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+
+            <!-- Coluna 3 - Conteúdo -->
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+                <details class="footer-lgpd">
+                    <summary>LGPD</summary>
+                    <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                        Privacidade</a>
+                    <a href="../politica-cookies.pdf" target="_blank" rel="noopener">Política de Cookies</a>
+                </details>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                <p>(11) 1234-5678</p>
+                <p>contato@acb.com.br</p>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                    Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/script.js"></script>
+    <script type="module" src="../src/js/quemsomos.js"></script>
+</body>
+
+</html>

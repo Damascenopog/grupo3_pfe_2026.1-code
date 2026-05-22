@@ -1,0 +1,1008 @@
+/* Estilos da página Membros (extraídos de css/style.css) */
+
+.mb-hero {
+    padding: 84px 0 80px;
+    background-color: #fff;
+}
+
+.mb-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 480px);
+    justify-content: center;
+    align-items: center;
+}
+
+.mb-area-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1a4fc4;
+    margin-bottom: 18px;
+}
+
+.mb-hero-text h1 {
+    font-size: clamp(2.6rem, 4vw, 4.1rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.08;
+    margin-bottom: 22px;
+    font-family: "Montserrat", sans-serif;
+    max-width: 12ch;
+}
+
+.mb-hero-text > p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 30px;
+    opacity: 1;
+    max-width: 62ch;
+}
+
+.mb-hero-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.mb-hero-list li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.mb-hero-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: #1a4fc4;
+    border-radius: 50%;
+}
+
+.mb-nao-associado {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a4fc4;
+    text-decoration: none;
+}
+
+.mb-nao-associado:hover {
+    text-decoration: underline;
+}
+
+.mb-login-card {
+    background-color: #fff;
+    border: 1px solid #dfe6f5;
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(26, 26, 102, 0.08);
+    overflow: hidden;
+    width: 100%;
+}
+
+.mb-login-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 24px 20px;
+    border-bottom: 1px solid #edf1f9;
+}
+
+.mb-login-icon {
+    width: 42px;
+    height: 42px;
+    background-color: #eef2fb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a4fc4;
+    flex-shrink: 0;
+}
+
+.mb-login-header strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2px;
+}
+
+.mb-login-header span {
+    font-size: 12.5px;
+    color: #888;
+}
+
+.mb-login-form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mb-login-form input {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.mb-toggle-senha {
+    position: absolute;
+    right: 12px;
+    bottom: 11px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #aab4cc;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mb-toggle-senha:hover {
+    color: #555;
+}
+
+.mb-login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: -4px;
+}
+
+.mb-check-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+}
+
+.mb-check-label input {
+    accent-color: #1a4fc4;
+    width: 15px;
+    height: 15px;
+}
+
+.mb-esqueci {
+    font-size: 13px;
+    color: #1a4fc4;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.mb-esqueci:hover {
+    text-decoration: underline;
+}
+
+.mb-sem-conta {
+    font-size: 13px;
+    color: #888;
+    text-align: center;
+    opacity: 1;
+}
+
+.mb-sem-conta a {
+    color: #1a4fc4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.mb-sem-conta a:hover {
+    text-decoration: underline;
+}
+
+.mb-seguro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #aaa;
+    justify-content: center;
+    line-height: 1.35;
+}
+
+.mb-beneficios-section {
+    padding: 80px 0;
+    background-color: #f4f7ff;
+}
+
+.mb-beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.mb-beneficio-card {
+    background-color: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    padding: 28px 24px;
+    transition:
+        box-shadow 0.2s,
+        transform 0.2s;
+}
+
+.mb-beneficio-card:hover {
+    box-shadow: 0 6px 24px rgba(26, 79, 196, 0.1);
+    transform: translateY(-2px);
+}
+
+.mb-beneficio-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 14px 0 8px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mb-beneficio-card p {
+    font-size: 13.5px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 1;
+}
+
+.mb-preview-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.mb-preview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 28px;
+    margin-top: 32px;
+    align-items: start;
+}
+
+.mb-preview-panel {
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(26, 26, 102, 0.07);
+    background-color: #fff;
+}
+
+.mb-panel-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f7f9fc;
+    border-bottom: 1px solid #e4e9f2;
+    padding: 12px 18px;
+}
+
+.mb-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.mb-dot--red {
+    background-color: #ff5f57;
+}
+
+.mb-dot--yellow {
+    background-color: #febc2e;
+}
+
+.mb-dot--green {
+    background-color: #28c840;
+}
+
+.mb-panel-title {
+    font-size: 12px;
+    color: #888;
+    margin-left: 6px;
+}
+
+.mb-panel-body {
+    padding: 24px;
+}
+
+.mb-panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mb-panel-header-row strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.mb-acesso-exclusivo {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+
+.mb-doc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.mb-doc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f3fa;
+}
+
+.mb-doc-item:last-child {
+    border-bottom: none;
+}
+
+.mb-doc-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.mb-doc-info svg {
+    color: #aab4cc;
+    flex-shrink: 0;
+}
+
+.mb-tag {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.mb-tag--novo {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.mb-tag--regulacao {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+.mb-tag--exclusivo {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.mb-tag--institucional {
+    background-color: #f3e8ff;
+    color: #7e22ce;
+}
+
+.mb-login-gate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    background-color: #f4f7ff;
+    border: 1.5px dashed #c5d0ea;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #1a4fc4;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mb-login-gate:hover {
+    background-color: #eef2fb;
+}
+
+.mb-preview-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mb-widget {
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(26, 26, 102, 0.05);
+}
+
+.mb-widget-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.mb-widget-text {
+    font-size: 13.5px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    opacity: 1;
+}
+
+.mb-novos-membros {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.mb-membro-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    color: #333;
+}
+
+.mb-avatar {
+    width: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.mb-cta-section {
+    padding: 72px 0 92px;
+    background-color: #f7f9ff;
+}
+
+.mb-cta-section .section-container {
+    text-align: center;
+}
+
+.mb-cta-section h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mb-cta-section p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.mb-cta-section .hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 520px) {
+    .mb-hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: start;
+    }
+
+    /* Coluna esquerda */
+    .mb-area-label {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #1a4fc4;
+        margin-bottom: 18px;
+    }
+
+    .mb-hero-text h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #1a1a2e;
+        line-height: 1.15;
+        margin-bottom: 20px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .mb-hero-text > p {
+        font-size: 15px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 28px;
+        opacity: 1;
+    }
+
+    .mb-hero-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mb-hero-list li {
+        position: relative;
+        padding-left: 22px;
+        font-size: 14.5px;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    .mb-hero-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 8px;
+        height: 8px;
+        background-color: #1a4fc4;
+        border-radius: 50%;
+    }
+
+    .mb-nao-associado {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1a4fc4;
+        text-decoration: none;
+    }
+
+    .mb-nao-associado:hover {
+        text-decoration: underline;
+    }
+
+    /* Card de login */
+    .mb-login-card {
+        background-color: #fff;
+        border: 1px solid #e4e9f2;
+        border-radius: 14px;
+        box-shadow: 0 8px 32px rgba(26, 26, 102, 0.09);
+        overflow: hidden;
+    }
+
+    .mb-login-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 22px 24px 18px;
+        border-bottom: 1px solid #f0f3fa;
+    }
+
+    .mb-login-icon {
+        width: 42px;
+        height: 42px;
+        background-color: #eef2fb;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1a4fc4;
+        flex-shrink: 0;
+    }
+
+    .mb-login-header strong {
+        display: block;
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 2px;
+    }
+
+    .mb-login-header span {
+        font-size: 12.5px;
+        color: #888;
+    }
+
+    .mb-login-form {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mb-login-form input {
+        max-width: 100%;
+    }
+
+    /* reutiliza .form-group, input da contato/associe */
+
+    .mb-toggle-senha {
+        position: absolute;
+        right: 12px;
+        bottom: 11px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #aab4cc;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .mb-toggle-senha:hover {
+        color: #555;
+    }
+
+    .mb-login-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -4px;
+    }
+
+    .mb-check-label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: #555;
+        cursor: pointer;
+    }
+
+    .mb-check-label input {
+        accent-color: #1a4fc4;
+        width: 15px;
+        height: 15px;
+    }
+
+    .mb-esqueci {
+        font-size: 13px;
+        color: #1a4fc4;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .mb-esqueci:hover {
+        text-decoration: underline;
+    }
+
+    .mb-sem-conta {
+        font-size: 13px;
+        color: #888;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .mb-sem-conta a {
+        color: #1a4fc4;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .mb-sem-conta a:hover {
+        text-decoration: underline;
+    }
+
+    .mb-seguro {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px;
+        color: #aaa;
+        justify-content: center;
+    }
+
+    /* ── SEÇÃO BENEFÍCIOS ───────────────────────── */
+    .mb-beneficios-section {
+        padding: 80px 0;
+        background-color: #f4f7ff;
+    }
+
+    .mb-beneficios-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 48px;
+    }
+
+    .mb-beneficio-card {
+        background-color: #fff;
+        border: 1px solid #e4e9f2;
+        border-radius: 12px;
+        padding: 28px 24px;
+        transition:
+            box-shadow 0.2s,
+            transform 0.2s;
+    }
+
+    .mb-beneficio-card:hover {
+        box-shadow: 0 6px 24px rgba(26, 79, 196, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .mb-beneficio-card h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 14px 0 8px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .mb-beneficio-card p {
+        font-size: 13.5px;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+        opacity: 1;
+    }
+
+    /* ── SEÇÃO PREVIEW ──────────────────────────── */
+    .mb-preview-section {
+        padding: 80px 0;
+        background-color: #fff;
+    }
+
+    .mb-preview-grid {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 28px;
+        margin-top: 32px;
+        align-items: start;
+    }
+
+    /* Painel simulado */
+    .mb-preview-panel {
+        border: 1px solid #e4e9f2;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(26, 26, 102, 0.07);
+    }
+
+    .mb-panel-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #f7f9fc;
+        border-bottom: 1px solid #e4e9f2;
+        padding: 12px 18px;
+    }
+
+    .mb-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    .mb-dot--red {
+        background-color: #ff5f57;
+    }
+    .mb-dot--yellow {
+        background-color: #febc2e;
+    }
+    .mb-dot--green {
+        background-color: #28c840;
+    }
+
+    .mb-panel-title {
+        font-size: 12px;
+        color: #888;
+        margin-left: 6px;
+    }
+
+    .mb-panel-body {
+        padding: 24px;
+    }
+
+    .mb-panel-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .mb-panel-header-row strong {
+        font-size: 15px;
+        font-weight: 700;
+        color: #1a1a2e;
+    }
+
+    .mb-acesso-exclusivo {
+        font-size: 12px;
+        font-weight: 600;
+        color: #888;
+    }
+
+    .mb-doc-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .mb-doc-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+        border-bottom: 1px solid #f0f3fa;
+    }
+
+    .mb-doc-item:last-child {
+        border-bottom: none;
+    }
+
+    .mb-doc-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+    .mb-doc-info svg {
+        color: #aab4cc;
+        flex-shrink: 0;
+    }
+
+    .mb-tag {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 20px;
+        white-space: nowrap;
+    }
+
+    .mb-tag--novo {
+        background-color: #dbeafe;
+        color: #1d4ed8;
+    }
+    .mb-tag--regulacao {
+        background-color: #fef9c3;
+        color: #854d0e;
+    }
+    .mb-tag--exclusivo {
+        background-color: #dcfce7;
+        color: #166534;
+    }
+    .mb-tag--institucional {
+        background-color: #f3e8ff;
+        color: #7e22ce;
+    }
+
+    .mb-login-gate {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 13px;
+        background-color: #f4f7ff;
+        border: 1.5px dashed #c5d0ea;
+        border-radius: 8px;
+        font-size: 13.5px;
+        font-weight: 600;
+        color: #1a4fc4;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .mb-login-gate:hover {
+        background-color: #eef2fb;
+    }
+
+    /* Widgets lado direito */
+    .mb-preview-widgets {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mb-widget {
+        border: 1px solid #e4e9f2;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 12px rgba(26, 26, 102, 0.05);
+    }
+
+    .mb-widget-label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 12.5px;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .mb-widget-text {
+        font-size: 13.5px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 14px;
+        opacity: 1;
+    }
+
+    .mb-novos-membros {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 4px;
+    }
+
+    .mb-membro-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13.5px;
+        color: #333;
+    }
+
+    .mb-avatar {
+        width: 30px;
+        font-weight: 700;
+        font-size: 13px;
+        flex-shrink: 0;
+    }
+
+    .mb-cta-section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin-bottom: 14px;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+/* Ajustes fora do breakpoint */
+.mb-login-card {
+    max-width: 480px;
+}
+.mb-preview-grid {
+    grid-template-columns: 1fr;
+}
+.mb-preview-widgets {
+    flex-direction: row;
+}
+.mb-widget {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .mb-beneficios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .mb-hero-text h1 {
+        font-size: 1.9rem;
+    }
+    .mb-beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    .mb-preview-widgets {
+        flex-direction: column;
+    }
+}

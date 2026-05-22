@@ -1,0 +1,402 @@
+/* Página de contato */
+.hero-banner-contato {
+    height: 420px;
+    background:
+        linear-gradient(
+            to right,
+            rgba(10, 20, 80, 0.92),
+            rgba(26, 35, 126, 0.5)
+        ),
+        url("../../assets/images/backgrounds/fundo-zul.jpg") center/cover
+            no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.hero-banner-contato:not([style]) {
+    background-color: #0f1a4a;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(10, 14, 54, 0.9),
+            rgba(30, 37, 109, 0.4)
+        ),
+        url("../../assets/images/backgrounds/fundo-zul.jpg") no-repeat;
+}
+
+.canais-section {
+    padding: 64px 0 40px;
+    background-color: #f4f7ff;
+}
+
+.canais-section .section-container,
+.formulario-section .section-container,
+.faq-section .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.hero-banner-contato .content-wrapper {
+    max-width: 640px;
+}
+
+.content-wrapper h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: #ffcc00;
+}
+
+.canais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+    justify-content: center;
+}
+
+.canal-card {
+    background-color: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 12px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: box-shadow 0.2s;
+}
+
+.canal-card:hover {
+    box-shadow: 0 4px 20px rgba(26, 79, 196, 0.1);
+}
+
+.canal-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #eef2fb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a4fc4;
+    margin-bottom: 8px;
+}
+
+.canal-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.canal-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a4fc4;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+.canal-value--highlight {
+    color: #1a4fc4;
+}
+
+.canal-info {
+    font-size: 12.5px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.sla-banner {
+    background-color: #fff;
+    border: 1px solid #e4e9f2;
+    border-radius: 10px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.sla-icon {
+    color: #f5a623;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.sla-title {
+    font-size: 14px;
+    color: #1a1a2e;
+    white-space: nowrap;
+}
+
+.sla-items {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.sla-items span {
+    font-size: 13px;
+    color: #666;
+}
+
+.sla-items strong {
+    color: #1a1a2e;
+}
+
+.formulario-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.formulario-info .subtitle {
+    display: flex;
+    align-items: center;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+}
+
+.formulario-info .subtitle::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background-color: var(--accent-yellow);
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.formulario-info .title {
+    font-size: 2rem;
+    color: #1a1a2e;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.formulario-info .description {
+    font-size: 14.5px;
+    color: #666;
+    line-height: 1.65;
+    margin-bottom: 28px;
+}
+
+.formulario-image {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    background-color: #dce6fb;
+}
+
+.formulario-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.formulario-image--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aafdb;
+    font-size: 13px;
+}
+
+.formulario-card,
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 680px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contato-form .form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contato-form .form-group label {
+    color: #020617;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.contato-form input,
+.contato-form textarea,
+.contato-form select {
+    width: 100%;
+    max-width: 100%;
+    border: 1.5px solid #cfd9ee;
+    border-radius: 8px;
+    color: #1f2937;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.contato-form input,
+.contato-form select {
+    height: 43px;
+    padding: 0 15px;
+}
+
+.contato-form textarea {
+    min-height: 132px;
+    padding: 13px 15px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+    color: #9cadcd;
+    font-weight: 600;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus,
+.contato-form select:focus {
+    border-color: #1a4fc4;
+    box-shadow: 0 0 0 3px rgba(26, 79, 196, 0.1);
+}
+
+.contato-submit {
+    min-height: 46px;
+    margin-top: 2px;
+    background-color: #2454c9;
+}
+
+.contato-submit:hover {
+    background-color: #1945af;
+}
+
+.contato-form .form-privacidade {
+    margin: 0;
+    color: #8a94a6;
+    font-size: 12.5px;
+    line-height: 1.45;
+    text-align: center;
+}
+
+.form-success {
+    display: none;
+    color: #166534;
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .canais-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        justify-content: center;
+    }
+}
+
+@media (max-width: 960px) {
+    .formulario-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contato-form {
+        max-width: none;
+    }
+
+    .formulario-image {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sla-banner,
+    .sla-items {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sla-title {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 600px) {
+    .canais-section .section-container,
+    .formulario-section .section-container,
+    .faq-section .section-container {
+        padding: 0 20px;
+    }
+
+    .canais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sla-items {
+        gap: 16px;
+    }
+
+    .hero-banner-contato {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-card,
+    .contato-form {
+        padding: 0;
+    }
+
+    .formulario-image {
+        height: 220px;
+    }
+
+    .faq-header h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 430px) {
+    .canal-card {
+        padding: 20px;
+    }
+}

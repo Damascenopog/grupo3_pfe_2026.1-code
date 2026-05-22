@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../src/css/quemsomos.css">
+    <link rel="stylesheet" href="../src/css/blog.css">
+    <title>Blog</title>
+</head>
+
+<body style="background-color: lightgray;">
+    <!-- =============================================
+     HEADER (REPLICADO PARA TODAS AS PAGINAS)
+     ============================================= -->
+    <header class="top-header">
+        <nav class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB">
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="../index.html" class="active">Início</a>
+                <a href="./quemsomos.html">Quem somos</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./membros.html">Membros</a>
+                <a href="./contato.html">Contato</a>
+            </div>
+
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="./login.html" class="btn-outline">Entrar</a>
+                <a href="./cadastro.html" class="btn-solid">Associe-se</a>
+            </div>
+
+        </nav>
+    </header>
+    <!-- FIM DO HEADER -->
+
+    <main>
+        <!-- Topo: Imagem de fundo com overlay azul -->
+        <div class="hero-banner-quem-somos">
+            <div class="container-quem-somos">
+                <!-- textos da seção de hero -->
+                <div class="content-wrapper">
+                    <span class="badge">BLOG &amp; NEWSLETTER</span>
+                    <h1>Conte&uacute;do institucional para conselheiros e lideran&ccedil;as</h1>
+                    <p style="color: #ffcc00;">
+                        Acompanhe artigos, an&aacute;lises e newsletters da ACBrasil
+                        sobre governan&ccedil;a, atua&ccedil;&atilde;o de conselhos e temas
+                        relevantes para profissionais que participam das decis&otilde;es
+                        nas organiza&ccedil;&otilde;es.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="blog-section">
+            <div class="section-container">
+
+                <div class="section-label">
+                    <span class="label-bar"></span>
+                    Blog &amp; Newsletter
+                </div>
+
+                <div class="blog-gallery-block">
+                    <div class="section-header-row">
+                        <h2>Artigos</h2>
+                        <div class="blog-search-wrap">
+                            <label class="blog-search-label" for="blog-search-artigos">Buscar artigos</label>
+                            <input id="blog-search-artigos" class="blog-search-input" type="search"
+                                list="blog-search-artigos-suggestions" placeholder="Título ou categoria"
+                                autocomplete="off">
+                            <datalist id="blog-search-artigos-suggestions"></datalist>
+                        </div>
+                    </div>
+                    <div class="blog-grid" id="blog-grid-artigos"></div>
+                    <nav class="blog-pagination" id="blog-pagination-artigos" aria-label="Paginação de artigos"></nav>
+                </div>
+
+                <div class="blog-gallery-block blog-gallery-block-newsletter">
+                    <div class="section-header-row">
+                        <h2>Newsletter</h2>
+                        <div class="blog-search-wrap">
+                            <label class="blog-search-label" for="blog-search-newsletter">Buscar newsletters</label>
+                            <input id="blog-search-newsletter" class="blog-search-input" type="search"
+                                list="blog-search-newsletter-suggestions" placeholder="Título ou categoria"
+                                autocomplete="off">
+                            <datalist id="blog-search-newsletter-suggestions"></datalist>
+                        </div>
+                    </div>
+                    <div class="blog-grid" id="blog-grid-newsletter"></div>
+                    <nav class="blog-pagination" id="blog-pagination-newsletter" aria-label="Paginação de newsletters">
+                    </nav>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Logo + descrição -->
+            <div class="footer-col">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>
+                    A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Institucional -->
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <!-- Coluna 3 - Conteúdo -->
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+                <details class="footer-lgpd">
+                    <summary>LGPD</summary>
+                    <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                        Privacidade</a>
+                    <a href="../politica-cookies.pdf" target="_blank" rel="noopener">Política de Cookies</a>
+                </details>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                <p>(11) 1234-5678</p>
+                <p>contato@acb.com.br</p>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                    Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

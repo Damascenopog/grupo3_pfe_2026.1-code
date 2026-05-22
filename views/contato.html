@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../src/css/contato.css">
+    <title>Contato — ACB Brasil</title>
+</head>
+
+<body>
+
+    <!-- =============================================
+     HEADER (REPLICADO PARA TODAS AS PAGINAS)
+     ============================================= -->
+    <header class="top-header">
+        <nav class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB">
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="../index.html" class="active">Início</a>
+                <a href="./quemsomos.html">Quem somos</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./membros.html">Membros</a>
+                <a href="./contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="./login.html" class="btn-outline">Entrar</a>
+                <a href="./cadastro.html" class="btn-solid">Associe-se</a>
+            </div>
+
+        </nav>
+    </header>
+    <!-- FIM DO HEADER -->
+
+    <main>
+
+        <!-- ===================== HERO CONTATO ===================== -->
+        <section class="hero-banner-contato">
+            <div class="container-quem-somos">
+                <div class="content-wrapper">
+                    <span class="badge">CONTATO</span>
+                    <h1>Estamos aqui para ajudar</h1>
+                    <p>
+                        Seja para tirar dúvidas, conhecer melhor a ACBrasil ou resolver
+                        questões relacionadas à sua associação — nossa equipe está
+                        pronta para atender.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CANAIS DE CONTATO ===================== -->
+        <section class="canais-section">
+            <div class="section-container">
+                <div class="canais-grid">
+
+                    <div class="canal-card">
+                        <div class="canal-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <rect x="2" y="4" width="20" height="16" rx="3" />
+                                <path d="M2 7l10 7 10-7" />
+                            </svg>
+                        </div>
+                        <span class="canal-label">E-MAIL</span>
+                        <a href="mailto:contato@acbrasil.org.br" class="canal-value">contato@acbrasil.org.br</a>
+                    </div>
+
+                    <div class="canal-card">
+                        <div class="canal-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.8 19.8 0 01.1 2.18 2 2 0 012.08 0h3a2 2 0 012 1.72c.13 1 .36 1.97.71 2.91a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.17-1.17a2 2 0 012.11-.45c.94.35 1.91.58 2.91.71A2 2 0 0122 16.92z" />
+                            </svg>
+                        </div>
+                        <span class="canal-label">TELEFONE</span>
+                        <a href="tel:+551133330000" class="canal-value">(11) 99719-5099</a>
+                    </div>
+
+                    <div class="canal-card">
+                        <div class="canal-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <span class="canal-label">SEDE</span>
+                        <span class="canal-value canal-value--highlight">Av. Paulista, 1374 — SP</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== FORMULÁRIO + MAPA ===================== -->
+        <section class="formulario-section">
+            <div class="section-container">
+                <div class="formulario-grid">
+
+                    <!-- Lado esquerdo: texto + imagem -->
+                    <div class="formulario-info">
+                        <span class="subtitle">FORMULÁRIO</span>
+                        <h2 class="title">Envie uma mensagem<br>para nossa equipe</h2>
+                        <p class="description">
+                            Preencha o formulário e nossa equipe de relacionamento entrará em contato o mais
+                            breve possível. Para questões urgentes, prefira o telefone ou WhatsApp.
+                        </p>
+                        <div class="formulario-image">
+                            <img src="../assets/images/equipe.jpg" alt="Sede ACB Brasil"
+                                onerror="this.style.display='none'; this.parentElement.classList.add('formulario-image--placeholder')">
+                        </div>
+                    </div>
+
+                    <!-- Lado direito: formulário -->
+                    <form class="formulario-card contato-form" onsubmit="enviarMensagem(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com.br"
+                                    autocomplete="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <input type="text" id="assunto" name="assunto" placeholder="Sobre o que você precisa falar?"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" rows="6"
+                                placeholder="Descreva sua solicitação com detalhes..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar contato-submit">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                            Enviar mensagem
+                        </button>
+                        <p class="form-privacidade">Ao enviar, você concorda com nossa <a
+                                href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política
+                                de Privacidade</a>.</p>
+                        <div class="form-success" id="formSuccess">
+                            ✅ Mensagem enviada com sucesso! Retornaremos em breve.
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FAQ ===================== -->
+        <section class="faq-section">
+            <div class="section-container">
+
+                <div class="faq-header">
+                    <span class="section-label">FAQ</span>
+                    <h2>Perguntas frequentes</h2>
+                </div>
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Como posso verificar o status da minha associação?
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Acesse a <strong>Área de Associados</strong> com seu e-mail e senha cadastrados. Na tela
+                                inicial do painel, você encontra o status atual da sua associação, data de vencimento e
+                                histórico de pagamentos.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Qual é o prazo para resposta após o envio do formulário de contato?
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>O prazo padrão para respostas via formulário web é de <strong>até 48 horas
+                                    úteis</strong>. Para demandas urgentes, recomendamos o contato por telefone ou
+                                WhatsApp, com atendimento mais ágil.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Como faço para alterar meus dados cadastrais?
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Alterações cadastrais podem ser feitas diretamente na Área de Associados, na seção "Meu
+                                Perfil". Caso tenha dificuldades de acesso, entre em contato com nosso suporte pelo
+                                e-mail ou formulário.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Posso cancelar minha associação a qualquer momento?
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Sim. O cancelamento pode ser solicitado a qualquer momento via formulário ou por e-mail.
+                                A solicitação será processada em até 5 dias úteis e o acesso será mantido até o fim do
+                                período vigente.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Tenho dúvidas sobre os benefícios do meu plano. Com quem falo?
+                            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Nossa equipe de relacionamento está disponível para esclarecer qualquer dúvida sobre
+                                planos e benefícios. Entre em contato pelo telefone <strong>(11) 3333-0000</strong> ou
+                                envie uma mensagem pelo formulário acima.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+            </div>
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+                <details class="footer-lgpd">
+                    <summary>LGPD</summary>
+                    <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                        Privacidade</a>
+                    <a href="../politica-cookies.pdf" target="_blank" rel="noopener">Política de Cookies</a>
+                </details>
+            </div>
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Av. Paulista, 1374 — São Paulo, SP</p>
+                <p>(11) 99719-5099</p>
+                <p>contato@acbrasil.org.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                    Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            // fecha todos
+            document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+            // abre o clicado (se não estava aberto)
+            if (!isOpen) item.classList.add('open');
+        }
+
+        function enviarMensagem(event) {
+            event.preventDefault();
+            const validators = window.ACBForms;
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const assunto = document.getElementById('assunto').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            if (!validators || !validators.isName(nome)) {
+                alert('Informe um nome válido.');
+                return;
+            }
+
+            if (!validators.isEmail(email)) {
+                alert('Informe um e-mail válido.');
+                return;
+            }
+
+            if (!validators.hasText(assunto)) {
+                alert('Informe o assunto da mensagem.');
+                return;
+            }
+
+            if (!validators.hasText(mensagem, 10)) {
+                alert('Escreva uma mensagem com mais detalhes.');
+                return;
+            }
+
+            document.getElementById('formSuccess').style.display = 'block';
+            event.target.reset();
+
+            setTimeout(() => {
+                document.getElementById('formSuccess').style.display = 'none';
+            }, 5000);
+        }
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

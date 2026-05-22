@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../src/css/eventos.css">
+    <title>Eventos</title>
+</head>
+
+<body style="background-color: lightgray;">
+    <!-- =============================================
+     HEADER (REPLICADO PARA TODAS AS PAGINAS)
+     ============================================= -->
+    <header class="top-header">
+        <nav class="nav-container">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB">
+            </div>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu central -->
+            <div class="menu">
+                <a href="../index.html" class="active">Início</a>
+                <a href="./quemsomos.html">Quem somos</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./membros.html">Membros</a>
+                <a href="./contato.html">Contato</a>
+            </div>
+
+            <!-- Botões direita -->
+            <div class="actions">
+                <a href="./login.html" class="btn-outline">Entrar</a>
+                <a href="./cadastro.html" class="btn-solid">Associe-se</a>
+            </div>
+
+        </nav>
+    </header>
+    <!-- FIM DO HEADER -->
+
+    <main>
+        <section class="eventos-hero">
+            <div class="section-container">
+                <span class="eventos-badge">Webinars ACBrasil</span>
+                <h1>Conte&uacute;dos para conselheiros e lideran&ccedil;as</h1>
+                <p>Assista aos webinars da ACBrasil sobre governan&ccedil;a corporativa, conselhos, sustentabilidade,
+                    diversidade e temas relevantes para a atua&ccedil;&atilde;o nas organiza&ccedil;&otilde;es.</p>
+            </div>
+        </section>
+
+        <!-- Formulário: Avisos de novos webinars -->
+        <section class="formulario-section">
+            <div class="section-container">
+                <div class="formulario-card">
+                    <header class="form-cad-header">
+                        <h2>Quero ser avisado(a) sobre novos webinars</h2>
+                        <p>Cadastre seu contato para receber notificações sobre os próximos webinars da ACBrasil.</p>
+                    </header>
+
+                    <form class="contato-form" id="webinar-alert-form" onsubmit="enviarAvisoWebinar(event)" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="seu@exemplo.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="celular">Celular</label>
+                                <input type="text" id="celular" name="celular" placeholder="(11) 9xxxx-xxxx">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formacao">Formação / Atuação</label>
+                                <select id="formacao" name="formacao">
+                                    <option value="">—Escolha uma opção—</option>
+                                    <option>Conselheiro</option>
+                                    <option>Executivo / Diretor</option>
+                                    <option>Consultor</option>
+                                    <option>Acadêmico / Estudante</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <p class="form-privacidade">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="privacidade" required>
+                                <span class="checkbox-custom" aria-hidden="true"></span>
+                                Li e concordo com a <a href="../assets/docs/politica-privacidade.pdf" target="_blank"
+                                    rel="noopener">Política de Privacidade</a>.
+                            </label>
+                        </p>
+
+                        <div class="form-actions">
+                            <button type="submit" class="contato-submit">Quero ser avisado(a)</button>
+                        </div>
+
+                        <div class="form-success" id="webinar-form-success">Obrigado! Você será avisado(a) quando
+                            tivermos novos webinars.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="eventos-webinars">
+            <div class="section-container">
+                <div class="section-label">
+                    <span class="label-bar"></span>
+                    Biblioteca de webinars
+                </div>
+
+                <div class="section-header-row eventos-header-row">
+                    <h2>Todos os webinars</h2>
+                    <a href="../index.html" class="ver-todos">&larr; Voltar para o in&iacute;cio</a>
+                </div>
+
+                <div class="webinar-grid eventos-webinar-grid" id="webinar-eventos-grid"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+
+            <!-- Coluna 1 - Logo + descrição -->
+            <div class="footer-col">
+                <img src="../assets/images/logo-acb.png" alt="Logo ACB" class="footer-logo">
+                <p>
+                    A ACB tem como propósito promover, fortalecer, congregar e representar profissionais que atuam como
+                    conselheiros nas organizações públicas e privadas.
+                </p>
+            </div>
+
+            <!-- Coluna 2 - Institucional -->
+            <div class="footer-col">
+                <h3>Institucional</h3>
+                <a href="../index.html">Início</a>
+                <a href="quemsomos.html">Quem somos</a>
+                <a href="contato.html">Contato</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+
+            <!-- Coluna 3 - Conteúdo -->
+            <div class="footer-col">
+                <h3>Conteúdo</h3>
+                <a href="blog.html">Blog</a>
+                <a href="eventos.html">Eventos</a>
+                <details class="footer-lgpd">
+                    <summary>LGPD</summary>
+                    <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                        Privacidade</a>
+                    <a href="../politica-cookies.pdf" target="_blank" rel="noopener">Política de Cookies</a>
+                </details>
+            </div>
+
+            <!-- Coluna 4 - Contato -->
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>Rua Exemplo, 123 - São Paulo, SP</p>
+                <p>(11) 1234-5678</p>
+                <p>contato@acb.com.br</p>
+            </div>
+
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>© 2024 Associação de Conselheiros do Brasil. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="../assets/docs/politica-privacidade.pdf" target="_blank" rel="noopener">Política de
+                    Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/form-validation.js"></script>
+    <script>
+        function enviarAvisoWebinar(event) {
+            event.preventDefault();
+
+            const validators = window.ACBForms;
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const celular = document.getElementById('celular').value.trim();
+            const formacao = document.getElementById('formacao').value.trim();
+            const privacidade = document.querySelector('input[name="privacidade"]');
+
+            if (!validators || !validators.isName(nome)) {
+                alert('Informe um nome válido.');
+                return;
+            }
+
+            if (!validators.isEmail(email)) {
+                alert('Informe um e-mail válido.');
+                return;
+            }
+
+            if (celular && !validators.isPhone(celular)) {
+                alert('Informe um celular válido no formato (11) 99999-9999 ou deixe em branco.');
+                return;
+            }
+
+            if (!validators.isSelected(formacao)) {
+                alert('Escolha sua formação ou atuação.');
+                return;
+            }
+
+            if (!validators.isChecked(privacidade)) {
+                alert('Você precisa concordar com a Política de Privacidade.');
+                return;
+            }
+
+            const success = document.getElementById('webinar-form-success');
+            success.style.display = 'block';
+            event.target.reset();
+
+            setTimeout(() => {
+                success.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
